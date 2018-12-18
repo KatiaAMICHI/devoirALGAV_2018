@@ -39,7 +39,9 @@ class MyTestCase(unittest.TestCase):
         liste_elem1 = [50, 30, 70, 20, 40, 60, 80]
 
         for ele in liste_elem1:
-            tree.insert(ele)
+            tree.insert(ele, sort=True)
+        print(tree.print_pre_tree())
+        print('hethright : ', tree.getheight())
         self.assertEqual(tree.getheight(), 2)
         self.assertEqual(tree.getbalance(), 0)
         self.assertEqual(tree.search(60), True)
@@ -88,7 +90,7 @@ class MyTestCase(unittest.TestCase):
 
     def test_fichier_Search_Delete(self):
         """
-        OK
+        OK O(log(n)) | O(1)
         """
         l1_dic = FileReader()
 
@@ -97,8 +99,7 @@ class MyTestCase(unittest.TestCase):
             old_val = 0
             for i in range(0, 5 * int(type_file), int(type_file)):
                 h = AVLTree()
-                for ele in l1_dic[type_file][old_val:(i + int(type_file))]:
-                    h.insert(ele)
+                h.ConsIter(l1_dic[type_file][old_val:(i + int(type_file))])
 
                 delete_index_rand = random.randint(0, len(l1_dic[type_file][old_val:(i + int(type_file))])-1)
                 value_to_delete = l1_dic[type_file][old_val:(i + int(type_file))][delete_index_rand]
@@ -123,7 +124,8 @@ class MyTestCase(unittest.TestCase):
 
         sortDic = OrderedDict(a.items())
         pprint.pprint(sortDic)
-        plot(sortDic)
+        # TODO mettre un newparamètre pour plot !; pour la courbe
+        plot(sortDic, name="AVL_tree_Delete")
 
     def test_fichier_Insert(self):
         """
@@ -140,6 +142,7 @@ class MyTestCase(unittest.TestCase):
                 for ele in l1_dic[type_file][old_val:(i + int(type_file))]:
                     h.insert(ele, sort=True)
                 endC = time.time() - startC
+                endC /= len(l1_dic[type_file][old_val:(i + int(type_file))])
                 h.is_avltree()
                 try:
                     a[type_file] += endC

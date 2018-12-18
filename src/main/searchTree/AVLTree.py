@@ -1,5 +1,4 @@
 # TODO changer la méthode retation; utilisant celle vu en td
-# TODO changer < et > to inf
 
 from src.main.FileReader import inf, sup
 

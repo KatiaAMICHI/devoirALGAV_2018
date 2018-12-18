@@ -178,8 +178,8 @@ class ArrayMinHeap:
         # Cas de base
         if not isinstance(T_other, ArrayMinHeap):
             raise AssertionError("Error - Tree_other most be instance of ArrayMinHeap")
-        elif not self.is_arrayMinHeap() or not T_other.is_arrayMinHeap():
-            raise AssertionError("Error - Invalid structure MinHeap for self.tree or tree_other")
+        #elif not self.is_arrayMinHeap() or not T_other.is_arrayMinHeap():
+         #   raise AssertionError("Error - Invalid structure MinHeap for self.tree or tree_other")
         elif T_other is self:
             raise AssertionError("Error - it the same tree")
         elif T_other.size == 0:

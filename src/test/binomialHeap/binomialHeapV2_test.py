@@ -1,16 +1,11 @@
-import sys
-import unittest
-import time
 import pprint
-import numpy as np
-
+import sys
+import time
+import unittest
 from collections import OrderedDict
 
-from numpy import delete
-
-from src.main.binomialHeap import binomialHeapV2
-from bokeh.plotting import figure, show
 from src.main.FileReader import FileReader, plot
+from src.main.binomialHeap import binomialHeapV2
 
 if sys.version_info.major == 2:
     pass
@@ -67,7 +62,7 @@ class BinomialHeapTest(unittest.TestCase):
 
     def test_fichier_Delete(self):
         """
-        OK
+        OK == log(n)
         """
         l1_dic = FileReader()
 
@@ -103,7 +98,7 @@ class BinomialHeapTest(unittest.TestCase):
 
     def test_fichier_Insert(self):
         """
-        OK
+        OK ~ O(1) | << O(log(n))
         """
         l1_dic = FileReader()
 
@@ -116,6 +111,7 @@ class BinomialHeapTest(unittest.TestCase):
                 for ele in l1_dic[type_file][old_val:(i + int(type_file))]:
                     h.insert(ele)
                 endC = time.time() - startC
+                endC /= len(l1_dic[type_file][old_val:(i + int(type_file))])
                 h.is_binomialheap()
                 try:
                     a[type_file] += endC
@@ -125,15 +121,15 @@ class BinomialHeapTest(unittest.TestCase):
 
         for ele in a.keys():
             a[ele] /= 5
-        pprint.pprint(a)
 
         sortDic = OrderedDict(a.items())
+        pprint.pprint(sortDic)
 
         plot(sortDic, name='BinomialHeap_Insert')
 
     def test_fichier_ConstIter(self):
         """
-        OK
+        OK ~< O(n)
         """
 
         l1_dic = FileReader()

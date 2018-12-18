@@ -169,7 +169,11 @@ class BinaryTreeMinHeap(object):
             return consf.key, consf.left.key
         return consf.key, consf.right.key
 
-    def ConsIter(self, listElem=None, is_tree=False):
+    def ajout_simple(self, listElem):
+        for elem in listElem:
+            self.insert(elem, False)
+
+    def ConsIter(self, listElem=None, is_tree=False, ajout_simple=True):
 
         """
         @param listElem - une liste d'elements ordener de sorte a avoir la racine
@@ -177,10 +181,9 @@ class BinaryTreeMinHeap(object):
         @return true si OK false dans le cas contraire
         """
 
-        if not is_tree and listElem is not None:
+        if ajout_simple and not is_tree and listElem is not None:
             # contruction de la arbre binaire avec tous les éléments sans se soucier de la contrainte d'ordre
-            for elem in listElem:
-                self.insert(elem, False)
+            self.ajout_simple(listElem)
 
         if self.nbElem == 1:
             return self

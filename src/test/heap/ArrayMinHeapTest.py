@@ -2,10 +2,12 @@ import pprint
 import sys
 import time
 import unittest
+from builtins import print
+
 import numpy as np
 from collections import OrderedDict
 
-from src.main.FileReader import FileReader
+from src.main.FileReader import FileReader, plot
 from src.main.heap.ArrayMinHeap import ArrayMinHeap
 from bokeh.plotting import figure, show
 
@@ -63,7 +65,7 @@ class ArrayMinHeapTeat(unittest.TestCase):
 
     def test_fichier_SuppMin(self):
         """
-        OK
+        OK; log(n)
         """
         l1_dic = FileReader()
 
@@ -85,23 +87,14 @@ class ArrayMinHeapTeat(unittest.TestCase):
 
         for ele in a.keys():
             a[ele] /= 5
-        pprint.pprint(a)
 
         sortDic = OrderedDict(a.items())
-
-        p = figure(title="ArrayMinHeap-Delete", y_axis_type="log",
-                   x_range=(0, 50000), y_range=(list(sortDic.values())[0], 2),
-                   background_fill_color="#fafafa")
-
-        p.line(list(sortDic.keys()), list(sortDic.values()), legend="y=sqrt(x)",
-               line_color="tomato", line_dash="dashed")
-
-        p.legend.location = "top_left"
-
-        show(p)
+        pprint.pprint(sortDic)
+        plot(sortDic, name="ArrayMinHeap_Delete")
 
     def test_fichier_Insert(self):
         """
+        OK; log(1), log(n)
         """
 
         l1_dic = FileReader()
@@ -115,6 +108,7 @@ class ArrayMinHeapTeat(unittest.TestCase):
                 for elem in l1_dic[type_file][old_val:(i + int(type_file))]:
                     h.insert(elem)
                 endC = time.time() - startC
+                endC /= len(l1_dic[type_file][old_val:(i + int(type_file))])
                 self.assertEqual(h.is_arrayMinHeap(), True)
                 try:
                     a[type_file] += endC
@@ -124,24 +118,15 @@ class ArrayMinHeapTeat(unittest.TestCase):
 
         for ele in a.keys():
             a[ele] /= 5
-        pprint.pprint(a)
 
         sortDic = OrderedDict(a.items())
+        pprint.pprint(sortDic)
+        plot(sortDic)
 
-        p = figure(title="ArrayMinHeap-Insert", y_axis_type="log",
-                   x_range=(0, 50000), y_range=(list(sortDic.values())[0], 2),
-                   background_fill_color="#fafafa")
-
-        p.line(list(sortDic.keys()), list(sortDic.values()), legend="y=sqrt(x)",
-               line_color="tomato", line_dash="dashed")
-
-        p.legend.location = "top_left"
-
-        show(p)
 
     def test_fichier_ConstIter(self):
         """
-        OK
+        OK; O(n) comparaison des valeur nulérique
         """
         l1_dic = FileReader()
 
@@ -150,8 +135,9 @@ class ArrayMinHeapTeat(unittest.TestCase):
             old_val = 0
             for i in range(0, 5 * int(type_file), int(type_file)):
                 h = ArrayMinHeap()
+                h.ajout_simple(list_elem=l1_dic[type_file][old_val:(i + int(type_file))])
                 startC = time.time()
-                h.ConsIterTab(list_elem=l1_dic[type_file][old_val:(i + int(type_file))])
+                h.ConsIterTab(ajout_simple=False)
                 endC = time.time() - startC
                 self.assertEqual(h.is_arrayMinHeap(), True)
                 try:
@@ -165,17 +151,7 @@ class ArrayMinHeapTeat(unittest.TestCase):
 
         sortDic = OrderedDict(a.items())
         pprint.pprint(sortDic)
-
-        p = figure(title="ArrayMinHeap-ConsIter", y_axis_type="log",
-                   x_range=(0, 50000), y_range=(list(sortDic.values())[0], 2),
-                   background_fill_color="#fafafa")
-
-        p.line(list(sortDic.keys()), list(sortDic.values()), legend="y=sqrt(x)",
-               line_color="tomato", line_dash="dashed")
-
-        p.legend.location = "top_left"
-
-        show(p)
+        plot(sortDic, name="ArrayMinHeap-ConsIter")
 
     def test_fichier_Merge(self):
         """
@@ -211,17 +187,9 @@ class ArrayMinHeapTeat(unittest.TestCase):
 
         for ele in a.keys():
             a[ele] /= 5
-        pprint.pprint(a)
 
         sortDic = OrderedDict(a.items())
 
-        p = figure(title="ArrayMinHeap-Insert", y_axis_type="log",
-                   x_range=(0, 50000), y_range=(list(sortDic.values())[0], 2),
-                   background_fill_color="#fafafa")
+        pprint.pprint(sortDic)
 
-        p.line(list(sortDic.keys()), list(sortDic.values()), legend="y=sqrt(x)",
-               line_color="tomato", line_dash="dashed")
-
-        p.legend.location = "top_left"
-
-        show(p)
+        plot(sortDic)

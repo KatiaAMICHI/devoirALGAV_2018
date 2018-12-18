@@ -47,7 +47,8 @@ def sup(l1, l2, deb, fin):
 
 def plot3(sortDic1, sortDic2, sortDic3, n1='n1', n2='n2', n3='n3', name='plot'):
     p = figure(title=name, y_axis_type="log",
-               x_range=(0, int(list(sortDic1.keys())[len(list(sortDic1.keys()))-1])+10000), y_range=(list(sortDic1.values())[0], 1/2),
+               x_range=(0, int(list(sortDic1.keys())[len(list(sortDic1.keys())) - 1]) + 10000),
+               y_range=(list(sortDic1.values())[0], 1 / 2),
                background_fill_color="#fafafa")
 
     p.line(list(sortDic1.keys()), list(sortDic1.values()), legend=n1)
@@ -66,8 +67,9 @@ def plot3(sortDic1, sortDic2, sortDic3, n1='n1', n2='n2', n3='n3', name='plot'):
 
 def plot(sortDic, name="plot"):
     p = figure(title=name, y_axis_type="log",
-               x_range=(0, int(list(sortDic.keys())[len(list(sortDic.keys()))-1])),
-               y_range=(list(sortDic.values())[0], list(sortDic.values())[len(list(sortDic.values())) - 1]),
+               x_range=(0, int(list(sortDic.keys())[len(list(sortDic.keys())) - 1])),
+               y_range=(list(sortDic.values())[0], list(sortDic.values())[len(list(sortDic.values())) - 1] + len(
+                   list(sortDic.keys()))),
                background_fill_color="#fafafa")
 
     p.line(list(sortDic.keys()), list(sortDic.values()), legend="y=sqrt(x)",

@@ -49,7 +49,7 @@ class MyTestCase(unittest.TestCase):
 
     def test_fichier_Search(self):
         """
-        OK
+        KO a reftester
         """
         l1_dic = FileReader()
 
@@ -61,12 +61,13 @@ class MyTestCase(unittest.TestCase):
 
                 h.ConsIter(l1_dic[type_file][old_val:(i + int(type_file))])
 
-                delete_index_rand = random.randint(0, len(l1_dic[type_file][old_val:(i + int(type_file))]))
+                delete_index_rand = random.randint(0, len(l1_dic[type_file][old_val:(i + int(type_file))])-1)
                 value_to_delete = l1_dic[type_file][old_val:(i + int(type_file))][delete_index_rand]
 
                 startC = time.time()
-                self.assertEqual(h.search(value_to_delete), True)
+                h.search(value_to_delete)
                 endC = time.time() - startC
+                self.assertEqual(h.search(value_to_delete), True)
 
                 h.delete_value(value_to_delete)
                 self.assertEqual(h.search(value_to_delete), False)
@@ -98,7 +99,8 @@ class MyTestCase(unittest.TestCase):
                 h = AVLTree()
                 for ele in l1_dic[type_file][old_val:(i + int(type_file))]:
                     h.insert(ele)
-                delete_index_rand = random.randint(0, len(l1_dic[type_file][old_val:(i + int(type_file))]))
+
+                delete_index_rand = random.randint(0, len(l1_dic[type_file][old_val:(i + int(type_file))])-1)
                 value_to_delete = l1_dic[type_file][old_val:(i + int(type_file))][delete_index_rand]
 
                 self.assertEqual(h.search(value_to_delete), True)
@@ -106,10 +108,10 @@ class MyTestCase(unittest.TestCase):
                 startC = time.time()
                 h.delete_value(value_to_delete)
                 endC = time.time() - startC
+                h.is_avltree()
 
                 self.assertEqual(h.search(value_to_delete), False)
 
-                h.is_avltree()
                 try:
                     a[type_file] += endC
                 except:

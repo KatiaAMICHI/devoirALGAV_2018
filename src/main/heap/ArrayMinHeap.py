@@ -147,12 +147,16 @@ class ArrayMinHeap:
 
         return val_min
 
-    def ConsIterTab(self, list_elem=None, sort=True):
+    def ajout_simple(self, list_elem):
         if list_elem is not None:
             for ele in list_elem:
                 self.insert(ele, False)
-        if sort:
-            self.update_tree()
+
+    def ConsIterTab(self, list_elem=None, ajout_simple=True):
+        if ajout_simple:
+            self.ajout_simple(list_elem)
+
+        self.update_tree()
 
     def is_arrayMinHeap(self):
         index = self.size // 2 - 1
@@ -184,7 +188,6 @@ class ArrayMinHeap:
         elif self.size == 0:
             # on initialise notre arbre avec l'arbe passer en paramètre
             return T_other
-
         # autre cas
         elif self.size >= T_other.size:
             self.ConsIterTab(list_elem=T_other.get_heap_array())

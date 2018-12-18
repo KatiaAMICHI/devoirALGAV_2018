@@ -31,8 +31,8 @@ class BinaryTreeMinHeapTest(unittest.TestCase):
 
     def test_fichier_SuppMin(self):
         """
-       OK
-        """
+        OK log(n), log(1)
+            """
         l1_dic = FileReader()
 
         a = {}
@@ -61,7 +61,7 @@ class BinaryTreeMinHeapTest(unittest.TestCase):
 
     def test_fichier_Insert(self):
         """
-        OK
+        OK <log(n) | log(1)
         """
         l1_dic = FileReader()
 
@@ -88,11 +88,11 @@ class BinaryTreeMinHeapTest(unittest.TestCase):
         sortDic = OrderedDict(a.items())
         pprint.pprint(sortDic)
 
-        plot(sortDic)
+        plot(sortDic, name="BinaryTreeMinHeap_Insert")
 
     def test_fichier_ConstIter(self):
         """
-        OK
+        OK ~ O(n) un peu moins
         """
         l1_dic = FileReader()
 
@@ -103,11 +103,10 @@ class BinaryTreeMinHeapTest(unittest.TestCase):
                 h = BinaryTreeMinHeap()
 
                 # contruction de la arbre binaire avec tous les éléments sans se soucier de la contrainte d'ordre
-                for elem in l1_dic[type_file][old_val:(i + int(type_file))]:
-                    h.insert(elem, False)
+                h.ajout_simple(l1_dic[type_file][old_val:(i + int(type_file))])
 
                 startC = time.time()
-                h.ConsIter(is_tree=True)
+                h.ConsIter(is_tree=True, ajout_simple=False)
                 endC = time.time() - startC
                 self.assertEqual(h.isBinaryTreeMinHeap(), True)
                 try:
@@ -122,7 +121,7 @@ class BinaryTreeMinHeapTest(unittest.TestCase):
         sortDic = OrderedDict(a.items())
         pprint.pprint(sortDic)
 
-        plot(sortDic)
+        plot(sortDic, name="BinaryTreeMinHeap_ConstIter")
 
     def test_fichier_Merge(self):
         """

@@ -15,7 +15,7 @@ else:
 
 PATH_cles_alea = r'../../res/cles_alea/'
 PATH_Shakespeare = r'../../res/Shakespeare/'
-
+# TODO prendere le min max pour définir x y des plot !!
 
 def inf(l1, l2, deb, fin):
     if (isinstance(l1, np.int64) or isinstance(l1, np.int)) and (isinstance(l2, np.int64) or isinstance(l2, np.int)):
@@ -44,11 +44,12 @@ def sup(l1, l2, deb, fin):
 
 
 # y_range = (list(sortDic.values())[0], list(sortDic.values())[len(list(sortDic.values())) - 1]),
+# 1/2
 
 def plot3(sortDic1, sortDic2, sortDic3, n1='n1', n2='n2', n3='n3', name='plot'):
     p = figure(title=name, y_axis_type="log",
                x_range=(0, int(list(sortDic1.keys())[len(list(sortDic1.keys())) - 1]) + 10000),
-               y_range=(list(sortDic1.values())[0], 1 / 2),
+               y_range=(list(sortDic1.values())[0], list(sortDic1.values())[len(list(sortDic1.values())) - 1] + 2),
                background_fill_color="#fafafa")
 
     p.line(list(sortDic1.keys()), list(sortDic1.values()), legend=n1)

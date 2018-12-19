@@ -241,7 +241,6 @@ class BinomialHeap(object):
             if (self.rank < 0) != (self.value is None):
                 raise AssertionError("Error - Invalid node rank or value")
             if not is_root and not inf(min_result, self.value, DEB, FIN) and (min_result != self.value):
-                print('>>>>>>>>>>> : ', min_result, '|||| -', self.value)
                 raise AssertionError("Error - Invalid MinHeap")
 
             # check for children

@@ -112,7 +112,7 @@ class ArrayMinHeap:
 
     def echange(self, pere, fils):
         """
-        Permet d echanger les valeurs de pere et fils
+        Permet d echanger les valeurs de pere et de fils
         """
         tmp = pere
         pere = fils
@@ -178,12 +178,12 @@ class ArrayMinHeap:
         # Cas de base
         if not isinstance(T_other, ArrayMinHeap):
             raise AssertionError("Error - Tree_other most be instance of ArrayMinHeap")
-        #elif not self.is_arrayMinHeap() or not T_other.is_arrayMinHeap():
-         #   raise AssertionError("Error - Invalid structure MinHeap for self.tree or tree_other")
+        # elif not self.is_arrayMinHeap() or not T_other.is_arrayMinHeap():
+        #   raise AssertionError("Error - Invalid structure MinHeap for self.tree or tree_other")
         elif T_other is self:
             raise AssertionError("Error - it the same tree")
         elif T_other.size == 0:
-            #raise AssertionError("Error - tree_other is empty")
+            # raise AssertionError("Error - tree_other is empty")
             return self
         elif self.size == 0:
             # on initialise notre arbre avec l'arbe passer en paramètre
@@ -263,4 +263,3 @@ if __name__ == "__main__":
     #
     # print('h1 : ', hh.is_arrayMinHeap())
     # print()
-

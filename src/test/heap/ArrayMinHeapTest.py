@@ -3,13 +3,10 @@ import sys
 import time
 import unittest
 from builtins import print
-
-import numpy as np
 from collections import OrderedDict
 
 from src.main.FileReader import FileReader, plot
 from src.main.heap.ArrayMinHeap import ArrayMinHeap
-from bokeh.plotting import figure, show
 
 if sys.version_info.major == 2:
     pass
@@ -22,7 +19,7 @@ class ArrayMinHeapTeat(unittest.TestCase):
         heap0 = ArrayMinHeap(int_key=True)
         heap4 = ArrayMinHeap(int_key=True)
 
-        #        print("################insert#########################")
+        print("################insert#########################")
 
         heap0.insert(50)
         heap0.insert(23)
@@ -31,7 +28,7 @@ class ArrayMinHeapTeat(unittest.TestCase):
         heap0.insert(0)
         self.assertEqual(heap0.is_arrayMinHeap(), True)
 
-        #        print("################ConsIter#########################")
+        print("################ConsIter#########################")
 
         heap1 = ArrayMinHeap(heap_array=[50, 23, 11, 30, 0])
         heap2 = ArrayMinHeap(heap_array=[50, 23, 11, 30, 0])
@@ -42,7 +39,7 @@ class ArrayMinHeapTeat(unittest.TestCase):
         self.assertEqual(heap1.is_arrayMinHeap(), True)
         self.assertEqual(heap2.is_arrayMinHeap(), False)
 
-        #        print("################Union#########################")
+        print("################Union#########################")
 
         heap = ArrayMinHeap(heap_array=[5, 3, 1, 39, 6])
 
@@ -54,7 +51,7 @@ class ArrayMinHeapTeat(unittest.TestCase):
         self.assertEqual(heap.is_arrayMinHeap(), True)
         self.assertEqual(heap.size, 10)
 
-        #        print("################Delete#########################")
+        print("################Delete#########################")
         heap4.ConsIterTab([50, 23, 11, 0])
         self.assertEqual(heap4.is_arrayMinHeap(), True)
         self.assertEqual(heap4.get_min(), 0)
@@ -88,9 +85,10 @@ class ArrayMinHeapTeat(unittest.TestCase):
         for ele in a.keys():
             a[ele] /= 5
 
-        sortDic = OrderedDict(a.items())
+        sortDic = OrderedDict(sorted(a.items(), key=lambda x: int(x[0])))
+
         pprint.pprint(sortDic)
-        plot(sortDic, name="ArrayMinHeap_Delete")
+        plot(sortDic, name="ArrayMinHeap_SuppMin")
 
     def test_fichier_Insert(self):
         """
@@ -119,10 +117,10 @@ class ArrayMinHeapTeat(unittest.TestCase):
         for ele in a.keys():
             a[ele] /= 5
 
-        sortDic = OrderedDict(a.items())
-        pprint.pprint(sortDic)
-        plot(sortDic)
+        sortDic = OrderedDict(sorted(a.items(), key=lambda x: int(x[0])))
 
+        pprint.pprint(sortDic)
+        plot(sortDic, name="ArrayMinHeap_Ajout")
 
     def test_fichier_ConstIter(self):
         """
@@ -149,9 +147,10 @@ class ArrayMinHeapTeat(unittest.TestCase):
         for ele in a.keys():
             a[ele] /= 5
 
-        sortDic = OrderedDict(a.items())
+        sortDic = OrderedDict(sorted(a.items(), key=lambda x: int(x[0])))
+
         pprint.pprint(sortDic)
-        plot(sortDic, name="ArrayMinHeap-ConsIter")
+        plot(sortDic, name="ArrayMinHeap_ConsIter")
 
     def test_fichier_Merge(self):
         """
@@ -188,8 +187,50 @@ class ArrayMinHeapTeat(unittest.TestCase):
         for ele in a.keys():
             a[ele] /= 5
 
-        sortDic = OrderedDict(a.items())
+        sortDic = OrderedDict(sorted(a.items(), key=lambda x: int(x[0])))
 
         pprint.pprint(sortDic)
 
-        plot(sortDic)
+        plot(sortDic, name='ArrayMinHeap_Merge')
+
+    def test_fichier_MergeALL(self):
+        """
+        OK   log(m*log(n+m) ; (m<n)
+        """
+
+        l1_dic = FileReader()
+
+        a = {}
+        nb_foreach_file = {}
+        for type_file1 in l1_dic.keys():
+            for type_file2 in l1_dic.keys():
+                old_val = 0
+                old_val2 = 0
+                for i, j in zip(range(0, 5 * int(type_file1), int(type_file1)),
+                                range(0, 5 * int(type_file2), int(type_file2))):
+                    h1 = ArrayMinHeap()
+                    h2 = ArrayMinHeap()
+                    len_file = str(int(type_file1) + int(type_file2))
+                    h1.ConsIterTab(l1_dic[type_file1][old_val:(i + int(type_file1))])
+                    h2.ConsIterTab(l1_dic[type_file2][old_val2:(i + int(type_file2))])
+
+                    startC = time.time()
+                    h1 = h1.Union(h2)
+                    endC = time.time() - startC
+                    self.assertEqual(h1.is_arrayMinHeap(), True)
+                    try:
+                        nb_foreach_file[len_file] += 1
+                        a[len_file] += endC
+                    except:
+                        nb_foreach_file[len_file] = 1
+                        a[len_file] = endC
+                    old_val = i + int(type_file1)
+                    old_val2 = i + int(type_file2)
+
+        for f in a.keys():
+            a[f] /= nb_foreach_file[f]
+
+        sortDic = OrderedDict(sorted(a.items(), key=lambda x: int(x[0])))
+
+        pprint.pprint(sortDic)
+        plot(sortDic, name='ArrayMinHeap_MergeALL')

@@ -2,6 +2,7 @@ from math import *
 
 from src.main.FileReader import inf
 from src.main.heap.TreeMinHeap.BinaryTreeHeapNode import Node
+import graphviz as gv
 
 DEB = 2
 FIN = 10
@@ -311,6 +312,9 @@ class BinaryTreeMinHeap(object):
             T2.ConsIter(elem_T1)
             return T2
 
+    def plot(self):
+        self.root.plot()
+
 
 if __name__ == '__main__':
     arbre = BinaryTreeMinHeap()
@@ -330,3 +334,4 @@ if __name__ == '__main__':
 
     arbre = arbre.Union(arbre1)
     print(arbre.isBinaryTreeMinHeap())
+    arbre1.plot()

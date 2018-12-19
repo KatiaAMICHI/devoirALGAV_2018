@@ -1,4 +1,5 @@
 from src.main.FileReader import inf
+import graphviz as gv
 
 
 class Node:
@@ -77,3 +78,27 @@ class Node:
         if self.left is None and self.right is None:
             return False
         return True
+
+    def plot(self):
+        gtree = gv.Digraph(format='png')
+        print('>>>>>>>< ', self.key)
+        return self.to_graph(gtree, str(self.key))
+
+    def to_graph(self, g, prefixe):
+        print('>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>')
+        """ construit une représentation de l'arbre pour pouvoir
+            l'afficher
+        """
+        if not self.is_full():
+            g.node(prefixe, str(self.key), shape='ellipse')
+        else:
+            g.node(prefixe, str(self.key), shape='ellipse')
+            if self.left is not None:
+
+                print('////////////////////////////', type(self.left))
+                self.left.to_graph(g, prefixe + "g")
+                g.edge(prefixe, prefixe + "g")
+            if self.right is not None:
+                self.right.to_graph(g, prefixe + "d")
+                g.edge(prefixe, prefixe + "d")
+        return g

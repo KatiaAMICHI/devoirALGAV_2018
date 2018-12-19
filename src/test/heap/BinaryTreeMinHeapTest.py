@@ -54,7 +54,8 @@ class BinaryTreeMinHeapTest(unittest.TestCase):
         for ele in a.keys():
             a[ele] /= 5
 
-        sortDic = OrderedDict(a.items())
+        sortDic = OrderedDict(sorted(a.items(), key=lambda x: int(x[0])))
+
         pprint.pprint(sortDic)
 
         plot(sortDic, name='BinaryTreeMinHeap_deleteMin')
@@ -85,7 +86,8 @@ class BinaryTreeMinHeapTest(unittest.TestCase):
         for ele in a.keys():
             a[ele] /= 5
 
-        sortDic = OrderedDict(a.items())
+        sortDic = OrderedDict(sorted(a.items(), key=lambda x: int(x[0])))
+
         pprint.pprint(sortDic)
 
         plot(sortDic, name="BinaryTreeMinHeap_Insert")
@@ -118,7 +120,8 @@ class BinaryTreeMinHeapTest(unittest.TestCase):
         for ele in a.keys():
             a[ele] /= 5
 
-        sortDic = OrderedDict(a.items())
+        sortDic = OrderedDict(sorted(a.items(), key=lambda x: int(x[0])))
+
         pprint.pprint(sortDic)
 
         plot(sortDic, name="BinaryTreeMinHeap_ConstIter")
@@ -157,15 +160,52 @@ class BinaryTreeMinHeapTest(unittest.TestCase):
             a[ele] /= 5
         pprint.pprint(a)
 
-        sortDic = OrderedDict(a.items())
+        sortDic = OrderedDict(sorted(a.items(), key=lambda x: int(x[0])))
 
-        p = figure(title="BinaryTreeMinHeap_insert", y_axis_type="log",
-                   x_range=(0, 50000), y_range=(list(sortDic.values())[0], 2),
-                   background_fill_color="#fafafa")
+        plot(sortDic, name="BinaryTreeMinHeap_Merge")
 
-        p.line(list(sortDic.keys()), list(sortDic.values()), legend="y=sqrt(x)",
-               line_color="tomato", line_dash="dashed")
+    def test_fichier_MergeALL(self):
+        """
+        OK   log(m*log(n+m) ; (m<n)
+        """
 
-        p.legend.location = "top_left"
+        l1_dic = FileReader()
 
-        show(p)
+        a = {}
+        nb_foreach_file = {}
+        for type_file1 in l1_dic.keys():
+            for type_file2 in l1_dic.keys():
+                old_val = 0
+                old_val2 = 0
+                for i, j in zip(range(0, 5 * int(type_file1), int(type_file1)),
+                                range(0, 5 * int(type_file2), int(type_file2))):
+                    h1 = BinaryTreeMinHeap()
+                    h2 = BinaryTreeMinHeap()
+                    len_file = str(int(type_file1) + int(type_file2))
+                    h1.ConsIter(l1_dic[type_file1][old_val:(i + int(type_file1))])
+                    h2.ConsIter(l1_dic[type_file1][old_val2:(i + int(type_file2))])
+
+                    startC = time.time()
+                    h1 = h1.Union(h2)
+                    endC = time.time() - startC
+                    h1.isBinaryTreeMinHeap()
+                    try:
+                        nb_foreach_file[len_file] += 1
+                        a[len_file] += endC
+                    except:
+                        nb_foreach_file[len_file] = 1
+                        a[len_file] = endC
+                    old_val = i + int(type_file1)
+                    old_val2 = i + int(type_file2)
+
+        for f in a.keys():
+            a[f] /= nb_foreach_file[f]
+
+        sortDic = OrderedDict(sorted(a.items(), key=lambda x: int(x[0])))
+
+        print(
+            '#######################################BinaryTreeMinHeap_MergeALL#######################################')
+        pprint.pprint(sortDic)
+        plot(sortDic, name="BinaryTreeMinHeap_MergeALL")
+
+# TODO         sortDic = OrderedDict(sorted(a.items(), key=lambda x: int(x[0])))

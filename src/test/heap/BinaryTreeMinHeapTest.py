@@ -1,12 +1,8 @@
-import sys
-import unittest
-import time
 import pprint
-import numpy as np
-
+import sys
+import time
+import unittest
 from collections import OrderedDict
-
-from bokeh.plotting import figure, show
 
 from src.main.FileReader import FileReader, plot
 
@@ -17,8 +13,6 @@ else:
 
 from src.main.heap.TreeMinHeap.BinaryTreeMinHeap import BinaryTreeMinHeap
 
-
-# TODO après suppMin last n'est plus bon
 
 class BinaryTreeMinHeapTest(unittest.TestCase):
     def test_consIterInt(self):
@@ -42,8 +36,10 @@ class BinaryTreeMinHeapTest(unittest.TestCase):
                 h = BinaryTreeMinHeap()
                 h.ConsIter(l1_dic[type_file][old_val:(i + int(type_file))])
                 startC = time.time()
-                h.deleteMin()
+                min_value = h.deleteMin()
                 endC = time.time() - startC
+                self.assertEqual(h.isBinaryTreeMinHeap(), True)
+                h.insert(min_value)
                 self.assertEqual(h.isBinaryTreeMinHeap(), True)
                 try:
                     a[type_file] += endC
@@ -205,5 +201,3 @@ class BinaryTreeMinHeapTest(unittest.TestCase):
 
         pprint.pprint(sortDic)
         plot(sortDic, name="BinaryTreeMinHeap_MergeALL")
-
-# TODO         sortDic = OrderedDict(sorted(a.items(), key=lambda x: int(x[0])))

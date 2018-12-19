@@ -109,7 +109,6 @@ def fichiers_ShakespeareMD5():
 
 
 def Shakespeare():
-    # TODO renvoyer les MD5
     words = []
     for file in os.listdir(PATH_Shakespeare):
         f = open(PATH_Shakespeare + file, 'r', newline="\n")

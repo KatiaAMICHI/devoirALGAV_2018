@@ -4,11 +4,12 @@ from src.main.FileReader import inf
 from src.main.heap.TreeMinHeap.BinaryTreeHeapNode import Node
 import graphviz as gv
 
+import numpy as np
+
 DEB = 2
 FIN = 10
 
 
-# TODO updateMin
 class BinaryTreeMinHeap(object):
 
     def __init__(self):
@@ -93,6 +94,7 @@ class BinaryTreeMinHeap(object):
 
         if (mtr):
             self.updateTree()
+        self.update_last_element()
 
         return True
 
@@ -286,7 +288,21 @@ class BinaryTreeMinHeap(object):
                     left.key, keyMin.key = self.echange(left.key, keyMin.key)
                 elif inf(right.key, keyMin.key, DEB, FIN):
                     right.key, keyMin.key = self.echange(right.key, keyMin.key)
+        self.update_last_element()
         return del_min
+
+    def update_last_element(self):
+        # représentation binaire du nombre d'element dans le tas
+        binrep = np.binary_repr(self.nbElem)[1:]
+        i = 0
+        current = self.root
+        while current != None and i < len(binrep):
+            if binrep[i] == '1':
+                current = current.get_right()
+            else:
+                current = current.get_left()
+            i += 1
+        self.last = current
 
     def Union(self, T2):
         """

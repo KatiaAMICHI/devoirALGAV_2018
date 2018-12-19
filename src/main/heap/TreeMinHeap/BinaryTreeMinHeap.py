@@ -120,7 +120,7 @@ class BinaryTreeMinHeap(object):
 
     def isBinaryTreeMinHeap(self):
         cons = self.last
-        tmp = None
+
         new_child = None
 
         if self.nbElem == 0:
@@ -196,7 +196,7 @@ class BinaryTreeMinHeap(object):
 
         ok = False
         n_before = None
-
+        i = 0
         while not ok and n_current is not None:
             if n_current.get_parent() is None and (
                     n_current.get_right() is None or n_current.get_right().key == n_before or not n_current.get_right().is_parent()):
@@ -209,7 +209,9 @@ class BinaryTreeMinHeap(object):
                 min_child = self.minChild(n_current.get_left().key, n_current.get_right().key)
             elif n_current.get_left():
                 min_child = n_current.get_left().key
-            if not inf(n_current.key, min_child, DEB, FIN):
+            else:
+                min_child = None
+            if min_child is not None and not inf(n_current.key, min_child, DEB, FIN):
                 if min_child == n_current.left.key:
                     n_current.key, n_current.left.key = self.echangeConstW(n_current, n_current.left, True)
 
@@ -222,6 +224,7 @@ class BinaryTreeMinHeap(object):
             if n_current.get_parent() is not None:
                 n_before = n_current.key
                 n_current = n_current.get_parent()
+            i += 1
 
     def minChild(self, n1, n2):
         if n1 == n2:
@@ -313,25 +316,13 @@ class BinaryTreeMinHeap(object):
             return T2
 
     def plot(self):
-        self.root.plot()
+        return self.root.plot()
 
 
 if __name__ == '__main__':
     arbre = BinaryTreeMinHeap()
-    arbre1 = BinaryTreeMinHeap()
-    liste_elem = [50, 30, 70, 20, 40, 60, 80, 2, 3, 4, 5, 0]
-    ll = [50, 30, 70, 20, 40, 60, 80]
+    l = [50, 30, 70, 20, 40, 60, 80, 0, 1, 3]
 
-    for elem in liste_elem:
-        arbre.insert(elem, True)
-    #
+    arbre.ConsIter(l)  # [20, 30, 40, 50, 60, 70, 80]
 
-    arbre1.ConsIter(ll)  # [20, 30, 40, 50, 60, 70, 80]
-
-    #
-    print('arbre : ', arbre.printTree(), ' | estTasMin : ', arbre.isBinaryTreeMinHeap())
-    print('arbre 1: ', arbre1.printTree(), ' | estTasMin : ', arbre1.isBinaryTreeMinHeap())
-
-    arbre = arbre.Union(arbre1)
-    print(arbre.isBinaryTreeMinHeap())
-    arbre1.plot()
+    print(arbre.printTree())

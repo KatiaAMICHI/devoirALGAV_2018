@@ -203,8 +203,6 @@ class BinaryTreeMinHeapTest(unittest.TestCase):
 
         sortDic = OrderedDict(sorted(a.items(), key=lambda x: int(x[0])))
 
-        print(
-            '#######################################BinaryTreeMinHeap_MergeALL#######################################')
         pprint.pprint(sortDic)
         plot(sortDic, name="BinaryTreeMinHeap_MergeALL")
 

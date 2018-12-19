@@ -1,7 +1,7 @@
 import time
 from collections import OrderedDict
 
-from src.main.FileReader import Shakespeare, FileReader, plot, plot3
+from src.main.FileReader import Shakespeare, FileReader, plot, plot3, fichiers_ShakespeareMD5
 from src.main.binomialHeap.binomialHeap import BinomialHeap
 from src.main.heap.ArrayMinHeap import ArrayMinHeap
 from src.main.heap.TreeMinHeap.BinaryTreeMinHeap import BinaryTreeMinHeap
@@ -35,9 +35,8 @@ def collisonShakespeare():
             except:
                 word_dic[md5_word] = [word]
 
-    pprint.pprint(word_dic)
     for a in word_dic.keys():
-        if len(word_dic[a]) < 1:
+        if len(word_dic[a]) > 1:
             print('a : ', a, 'word : ', word_dic[a])
 
 
@@ -94,9 +93,10 @@ def SuppMin_Tas_File():
         a_arrayminheap[e2] /= 5
         a_binomialheap[e3] /= 5
 
-    sortDic_binarytreeminHeap = OrderedDict(a_binarytreeminHeap.items())
-    sortDic_arrayminheap = OrderedDict(a_arrayminheap.items())
-    sortDic_binomialheap = OrderedDict(a_binomialheap.items())
+    sortDic_binarytreeminHeap = OrderedDict(sorted(a_binarytreeminHeap.items(), key=lambda x: int(x[0])))
+    sortDic_arrayminheap = OrderedDict(sorted(a_arrayminheap.items(), key=lambda x: int(x[0])))
+    sortDic_binomialheap = OrderedDict(sorted(a_binomialheap.items(), key=lambda x: int(x[0])))
+
     pprint.pprint(sortDic_binarytreeminHeap)
     pprint.pprint(sortDic_arrayminheap)
     pprint.pprint(sortDic_binomialheap)
@@ -164,9 +164,10 @@ def Ajout_Tas_File():
         a_arrayminheap[e2] /= 5
         a_binomialheap[e3] /= 5
 
-    sortDic_binarytreeminHeap = OrderedDict(a_binarytreeminHeap.items())
-    sortDic_arrayminheap = OrderedDict(a_arrayminheap.items())
-    sortDic_binomialheap = OrderedDict(a_binomialheap.items())
+    sortDic_binarytreeminHeap = OrderedDict(sorted(a_binarytreeminHeap.items(), key=lambda x: int(x[0])))
+    sortDic_arrayminheap = OrderedDict(sorted(a_arrayminheap.items(), key=lambda x: int(x[0])))
+    sortDic_binomialheap = OrderedDict(sorted(a_binomialheap.items(), key=lambda x: int(x[0])))
+
     pprint.pprint(sortDic_binarytreeminHeap)
     pprint.pprint(sortDic_arrayminheap)
     pprint.pprint(sortDic_binomialheap)
@@ -233,9 +234,10 @@ def ConstIter_Tas_File():
         a_arrayminheap[e2] /= 5
         a_binomialheap[e3] /= 5
 
-    sortDic_binarytreeminHeap = OrderedDict(a_binarytreeminHeap.items())
-    sortDic_arrayminheap = OrderedDict(a_arrayminheap.items())
-    sortDic_binomialheap = OrderedDict(a_binomialheap.items())
+    sortDic_binarytreeminHeap = OrderedDict(sorted(a_binarytreeminHeap.items(), key=lambda x: int(x[0])))
+    sortDic_arrayminheap = OrderedDict(sorted(a_arrayminheap.items(), key=lambda x: int(x[0])))
+    sortDic_binomialheap = OrderedDict(sorted(a_binomialheap.items(), key=lambda x: int(x[0])))
+
     pprint.pprint(sortDic_binarytreeminHeap)
     pprint.pprint(sortDic_arrayminheap)
     pprint.pprint(sortDic_binomialheap)
@@ -337,7 +339,7 @@ def MergeALL_Tas_File():
 if __name__ == '__main__':
     # Question 6.12 / 6.13
 
-    # collisonShakespeare()
+    #collisonShakespeare()
 
     # Question 6.&4
 
@@ -346,3 +348,4 @@ if __name__ == '__main__':
     # ConstIter_Tas_File()
     #MergeALL_Tas_File()
     pass
+    pprint.pprint(fichiers_ShakespeareMD5())

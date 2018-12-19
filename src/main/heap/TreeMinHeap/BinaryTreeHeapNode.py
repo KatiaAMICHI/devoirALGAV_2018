@@ -66,7 +66,7 @@ class Node:
 
     def min_child(self):
         if self.right is not None:
-            if not inf(self.left.key, self.right.key, 2, 10):
+            if inf(self.left.key, self.right.key, 2, 10):
                 return self.left
             else:
                 return self.right
@@ -79,13 +79,12 @@ class Node:
             return False
         return True
 
+    # Permet d'afficher l'arbre
     def plot(self):
         gtree = gv.Digraph(format='png')
-        print('>>>>>>>< ', self.key)
         return self.to_graph(gtree, str(self.key))
 
     def to_graph(self, g, prefixe):
-        print('>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>')
         """ construit une représentation de l'arbre pour pouvoir
             l'afficher
         """
@@ -93,12 +92,10 @@ class Node:
             g.node(prefixe, str(self.key), shape='ellipse')
         else:
             g.node(prefixe, str(self.key), shape='ellipse')
-            if self.left is not None:
-
-                print('////////////////////////////', type(self.left))
+            if not (self.left is None):
                 self.left.to_graph(g, prefixe + "g")
                 g.edge(prefixe, prefixe + "g")
-            if self.right is not None:
+            if not (self.right is None):
                 self.right.to_graph(g, prefixe + "d")
                 g.edge(prefixe, prefixe + "d")
         return g

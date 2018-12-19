@@ -4,6 +4,12 @@ import sys
 import numpy as np
 from bokeh.plotting import figure, show
 
+from src.main.hach import MD5
+
+if sys.version_info.major == 2:
+    pass
+else:
+    pass
 if sys.version_info.major == 2:
     pass
 else:
@@ -15,7 +21,7 @@ else:
 
 PATH_cles_alea = r'../../res/cles_alea/'
 PATH_Shakespeare = r'../../res/Shakespeare/'
-# TODO prendere le min max pour définir x y des plot !!
+
 
 def inf(l1, l2, deb, fin):
     if (isinstance(l1, np.int64) or isinstance(l1, np.int)) and (isinstance(l2, np.int64) or isinstance(l2, np.int)):
@@ -47,9 +53,13 @@ def sup(l1, l2, deb, fin):
 # 1/2
 
 def plot3(sortDic1, sortDic2, sortDic3, n1='n1', n2='n2', n3='n3', name='plot'):
+    max_x = max(2,
+                int(list(sortDic2.keys())[len(list(sortDic1.keys())) - 1]),
+                int(list(sortDic3.keys())[len(list(sortDic1.keys())) - 1]))
+    max_y = list(sortDic1.values())[len(list(sortDic1.values())) - 1]
     p = figure(title=name, y_axis_type="log",
-               x_range=(0, int(list(sortDic1.keys())[len(list(sortDic1.keys())) - 1]) + 10000),
-               y_range=(list(sortDic1.values())[0], list(sortDic1.values())[len(list(sortDic1.values())) - 1] + 2),
+               x_range=(0, max_x + 10000),
+               y_range=(list(sortDic1.values())[0], max_y + 2),
                background_fill_color="#fafafa")
 
     p.line(list(sortDic1.keys()), list(sortDic1.values()), legend=n1)
@@ -81,8 +91,25 @@ def plot(sortDic, name="plot"):
     show(p)
 
 
+def fichiers_ShakespeareMD5():
+    data_dic = {}
+    data = []
+
+    md5 = MD5()
+    for file in os.listdir(PATH_Shakespeare):
+        f = open(PATH_Shakespeare + file, 'r', newline="\n")
+        data = f.read().rstrip().split()
+        for word in data:
+            try:
+                data_dic[str(len(data))].append(md5.md5_to_hex(md5.md5(word.encode())))
+            except:
+                data_dic[str(len(data))] = [md5.md5_to_hex(md5.md5(word.encode()))]
+
+    return data_dic
+
+
 def Shakespeare():
-    print('§§§§§§§')
+    # TODO renvoyer les MD5
     words = []
     for file in os.listdir(PATH_Shakespeare):
         f = open(PATH_Shakespeare + file, 'r', newline="\n")

@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/src/test/searchTree/AVLTreeTest.py" description="    def test_fichier_ConstIter(self):&#10;        &quot;&quot;&quot;&#10;..." line="129" />
+    <bookmark url="file://$PROJECT_DIR$/src/test/searchTree/AVLTreeTest.py" description="    def test_fichier_ConstIter(self):&#10;        &quot;&quot;&quot;&#10;..." line="136" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5c1d2ecd-bd08-444c-9101-5ba5d7fd2e66" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/hach/MD5_V2.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/experiment/experiment_cles_alea.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/.ipynb_checkpoints/Untitled-checkpoint.ipynb" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/FileReader.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/FileReader.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/binomialHeap/binomialHeapV2.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/binomialHeap/binomialHeap.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/devoir_prog_AlgAv_2018_arbre.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/devoir_prog_AlgAv_2018_arbre.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/experiment/__init__.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/experiment/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/experiment/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/heap/ArrayMinHeap.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/heap/ArrayMinHeap.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/experiment/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/experiment/experiment_Shakespeare.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/heap/TreeMinHeap/BinaryTreeHeapNode.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/heap/TreeMinHeap/BinaryTreeHeapNode.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/heap/TreeMinHeap/BinaryTreeMinHeap.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/heap/TreeMinHeap/BinaryTreeMinHeap.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/binomialHeap/binomialHeapV2_test.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/binomialHeap/binomialHeapTest.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/heap/ArrayMinHeapTest.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/heap/ArrayMinHeapTest.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/print_tree.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/searchTree/AVLTree.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/searchTree/AVLTree.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/binomialHeap/binomialHeapTest.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/binomialHeap/binomialHeapTest.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/heap/BinaryTreeMinHeapTest.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/heap/BinaryTreeMinHeapTest.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/searchTree/AVLTreeTest.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/searchTree/AVLTreeTest.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -29,33 +29,34 @@
     <SUITE FILE_PATH="coverage/devoirALGAV_2018$Unittests_in_binomialHeapV2_test_py.coverage" NAME="Unittests in binomialHeapV2_test.py Coverage Results" MODIFIED="1544304022783" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/devoirALGAV_2018$Unittests_for_binomialHeapV2_test_BinomialHeapTest_test_merge.coverage" NAME="Unittests for binomialHeapV2_test.BinomialHeapTest.test_merge Coverage Results" MODIFIED="1544686943622" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/test/binomialHeap" />
     <SUITE FILE_PATH="coverage/devoirALGAV_2018$Unittests_for_binomialHeapV2_test_BinomialHeapTest_test_fichier_Merge.coverage" NAME="Unittests for binomialHeapV2_test.BinomialHeapTest.test_fichier_Merge Coverage Results" MODIFIED="1544995140770" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/test/binomialHeap" />
-    <SUITE FILE_PATH="coverage/devoirALGAV_2018$Unittests_for_BinaryTreeMinHeapTest_BinaryTreeMinHeapTest_test_fichier_SuppMin.coverage" NAME="Unittests for BinaryTreeMinHeapTest.BinaryTreeMinHeapTest.test_fichier_SuppMin Coverage Results" MODIFIED="1545093705040" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/test/heap" />
+    <SUITE FILE_PATH="coverage/devoirALGAV_2018$Unittests_for_BinaryTreeMinHeapTest_BinaryTreeMinHeapTest_test_fichier_SuppMin.coverage" NAME="Unittests for BinaryTreeMinHeapTest.BinaryTreeMinHeapTest.test_fichier_SuppMin Coverage Results" MODIFIED="1545214793965" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/test/heap" />
     <SUITE FILE_PATH="coverage/devoirALGAV_2018$BinomialHeap.coverage" NAME="BinomialHeap Coverage Results" MODIFIED="1544268502408" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
     <SUITE FILE_PATH="coverage/devoirALGAV_2018$Unittests_in_binomialheap_test_py.coverage" NAME="Unittests in binomialheap-test.py Coverage Results" MODIFIED="1544269851034" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/devoirALGAV_2018$Unittests_for_AVLTreeTest_MyTestCase_test_insert.coverage" NAME="Unittests for AVLTreeTest.MyTestCase.test_insert Coverage Results" MODIFIED="1544730191970" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/test/searchTree" />
     <SUITE FILE_PATH="coverage/devoirALGAV_2018$Unittests_for_binomialheap_test_BinomialHeapTest.coverage" NAME="Unittests for binomialheap-test.BinomialHeapTest Coverage Results" MODIFIED="1544279468423" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/devoirALGAV_2018$Unittests_for_binomialHeapV2_test_BinomialHeapTest_test_fichier_Insert.coverage" NAME="Unittests for binomialHeapV2_test.BinomialHeapTest.test_fichier_Insert Coverage Results" MODIFIED="1545103308184" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/test/binomialHeap" />
-    <SUITE FILE_PATH="coverage/devoirALGAV_2018$Unittests_for_AVLTreeTest_MyTestCase_test_fichier_Search_Delete.coverage" NAME="Unittests for AVLTreeTest.MyTestCase.test_fichier_Search_Delete Coverage Results" MODIFIED="1545116361906" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/test/searchTree" />
     <SUITE FILE_PATH="coverage/devoirALGAV_2018$Unittests_for_binomialHeapV2_test_BinomialHeapTest_test_fichier_Delete.coverage" NAME="Unittests for binomialHeapV2_test.BinomialHeapTest.test_fichier_Delete Coverage Results" MODIFIED="1545134407159" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/test/binomialHeap" />
+    <SUITE FILE_PATH="coverage/devoirALGAV_2018$Unittests_for_AVLTreeTest_MyTestCase_test_fichier_Search_Delete.coverage" NAME="Unittests for AVLTreeTest.MyTestCase.test_fichier_Search_Delete Coverage Results" MODIFIED="1545224564402" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/test/searchTree" />
     <SUITE FILE_PATH="coverage/devoirALGAV_2018$arbres.coverage" NAME="arbres Coverage Results" MODIFIED="1544165698871" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$USER_HOME$/Documents/STL/ALGAV/devoir" />
     <SUITE FILE_PATH="coverage/devoirALGAV_2018$AVLTree.coverage" NAME="AVLTree Coverage Results" MODIFIED="1544979279344" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/main/searchTree" />
     <SUITE FILE_PATH="coverage/devoirALGAV_2018$Unittests_for_binomialHeapV2_test_BinomialHeapTest_test_fichier_Ajout.coverage" NAME="Unittests for binomialHeapV2_test.BinomialHeapTest.test_fichier_Ajout Coverage Results" MODIFIED="1545176281315" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/test/binomialHeap" />
     <SUITE FILE_PATH="coverage/devoirALGAV_2018$Unittests_for_BinaryTreeMinHeapTest_BinaryTreeMinHeapTest_test_fichier_Insert.coverage" NAME="Unittests for BinaryTreeMinHeapTest.BinaryTreeMinHeapTest.test_fichier_Insert Coverage Results" MODIFIED="1545094266077" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/test/heap" />
     <SUITE FILE_PATH="coverage/devoirALGAV_2018$Unittests_for_src_binomialHeapV2_test_BinomialHeapTest_test_fichier_Merge.coverage" NAME="Unittests for src.binomialHeapV2_test.BinomialHeapTest.test_fichier_Merge Coverage Results" MODIFIED="1544313998979" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/devoirALGAV_2018$experiment_Shakespeare.coverage" NAME="experiment_Shakespeare Coverage Results" MODIFIED="1545219363069" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/main/experiment" />
     <SUITE FILE_PATH="coverage/devoirALGAV_2018$Unittests_for_src_binomialHeapV2_test_BinomialHeapTest_test_fichier.coverage" NAME="Unittests for src.binomialHeapV2_test.BinomialHeapTest.test_fichier Coverage Results" MODIFIED="1544311163341" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/devoirALGAV_2018$Unittests_for_binomialHeapV2_test_BinomialHeapTest.coverage" NAME="Unittests for binomialHeapV2_test.BinomialHeapTest Coverage Results" MODIFIED="1544372061250" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/test" />
     <SUITE FILE_PATH="coverage/devoirALGAV_2018$Unittests_for_ArrayMinHeapTest_ArrayMinHeapTeat_test_fichier_Merge.coverage" NAME="Unittests for ArrayMinHeapTest.ArrayMinHeapTeat.test_fichier_Merge Coverage Results" MODIFIED="1545166104880" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/test/heap" />
     <SUITE FILE_PATH="coverage/devoirALGAV_2018$Unittests_for_src_binomialHeapV2_test_BinomialHeapTest_test_size_1.coverage" NAME="Unittests for src.binomialHeapV2_test.BinomialHeapTest.test_size_1 Coverage Results" MODIFIED="1544295062205" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/devoirALGAV_2018$Unittests_for_AVLTreeTest_MyTestCase_test_fichier_Merge.coverage" NAME="Unittests for AVLTreeTest.MyTestCase.test_fichier_Merge Coverage Results" MODIFIED="1544975079299" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/test/searchTree" />
-    <SUITE FILE_PATH="coverage/devoirALGAV_2018$BinaryTreeMinHeap.coverage" NAME="BinaryTreeMinHeap Coverage Results" MODIFIED="1545162905712" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/main/heap/TreeMinHeap" />
+    <SUITE FILE_PATH="coverage/devoirALGAV_2018$Unittests_for_AVLTreeTest_MyTestCase_test_fichier_Merge.coverage" NAME="Unittests for AVLTreeTest.MyTestCase.test_fichier_Merge Coverage Results" MODIFIED="1545225730540" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/test/searchTree" />
+    <SUITE FILE_PATH="coverage/devoirALGAV_2018$BinaryTreeMinHeap.coverage" NAME="BinaryTreeMinHeap Coverage Results" MODIFIED="1545254341183" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/main/heap/TreeMinHeap" />
     <SUITE FILE_PATH="coverage/devoirALGAV_2018$Unittests_in_MD5Test_py.coverage" NAME="Unittests in MD5Test.py Coverage Results" MODIFIED="1544315684045" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/main/hach" />
     <SUITE FILE_PATH="coverage/devoirALGAV_2018$Unittests_for_ArrayMinHeapTest_ArrayMinHeapTeat_test_int_all.coverage" NAME="Unittests for ArrayMinHeapTest.ArrayMinHeapTeat.test_int_all Coverage Results" MODIFIED="1544702780744" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/test/heap" />
     <SUITE FILE_PATH="coverage/devoirALGAV_2018$LRC_TME8_AMICHI_ZAOUZAOU.coverage" NAME="LRC_TME8_AMICHI_ZAOUZAOU Coverage Results" MODIFIED="1544569011419" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$USER_HOME$/Documents/STL/LRC" />
     <SUITE FILE_PATH="coverage/devoirALGAV_2018$Unittests_for_AVLTreeTest_MyTestCase_test_search_delete.coverage" NAME="Unittests for AVLTreeTest.MyTestCase.test_search_delete Coverage Results" MODIFIED="1544736691132" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/test/searchTree" />
     <SUITE FILE_PATH="coverage/devoirALGAV_2018$Unittests_for_binomialHeapV2_test_BinomialHeapTest_test_fichier_SuppMin.coverage" NAME="Unittests for binomialHeapV2_test.BinomialHeapTest.test_fichier_SuppMin Coverage Results" MODIFIED="1545176267961" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/test/binomialHeap" />
-    <SUITE FILE_PATH="coverage/devoirALGAV_2018$devoirALGAV_2018.coverage" NAME="devoirALGAV_2018 Coverage Results" MODIFIED="1545144094009" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/devoirALGAV_2018$devoirALGAV_2018.coverage" NAME="devoirALGAV_2018 Coverage Results" MODIFIED="1545214601156" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/devoirALGAV_2018$MD5.coverage" NAME="MD5 Coverage Results" MODIFIED="1544458451694" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/main/hach" />
-    <SUITE FILE_PATH="coverage/devoirALGAV_2018$Unittests_for_AVLTreeTest_MyTestCase_test_fichier_Search.coverage" NAME="Unittests for AVLTreeTest.MyTestCase.test_fichier_Search Coverage Results" MODIFIED="1545103985932" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/test/searchTree" />
+    <SUITE FILE_PATH="coverage/devoirALGAV_2018$Unittests_for_AVLTreeTest_MyTestCase_test_fichier_Search.coverage" NAME="Unittests for AVLTreeTest.MyTestCase.test_fichier_Search Coverage Results" MODIFIED="1545224095528" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/test/searchTree" />
     <SUITE FILE_PATH="coverage/devoirALGAV_2018$test.coverage" NAME="test Coverage Results" MODIFIED="1544302402970" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
     <SUITE FILE_PATH="coverage/devoirALGAV_2018$binomialheap.coverage" NAME="binomialheap Coverage Results" MODIFIED="1544259418327" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
     <SUITE FILE_PATH="coverage/devoirALGAV_2018$Unittests_for_src_binomialHeapV2_test_BinomialHeapTest_test_ConsIter.coverage" NAME="Unittests for src.binomialHeapV2_test.BinomialHeapTest.test_ConsIter Coverage Results" MODIFIED="1544290573082" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
@@ -67,7 +68,7 @@
     <SUITE FILE_PATH="coverage/devoirALGAV_2018$Unittests_for_binomialHeapV2_test_BinomialHeapTest_test_fichier_MergeALL.coverage" NAME="Unittests for binomialHeapV2_test.BinomialHeapTest.test_fichier_MergeALL Coverage Results" MODIFIED="1545176327428" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/test/binomialHeap" />
     <SUITE FILE_PATH="coverage/devoirALGAV_2018$Unittests_for_src_binomialHeapV2_test_BinomialHeapTest_test_size_2.coverage" NAME="Unittests for src.binomialHeapV2_test.BinomialHeapTest.test_size_2 Coverage Results" MODIFIED="1544279858398" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/devoirALGAV_2018$Unittests_for_AVLTreeTest_MyTestCase_test_fichier_Delete.coverage" NAME="Unittests for AVLTreeTest.MyTestCase.test_fichier_Delete Coverage Results" MODIFIED="1544970491420" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/test/searchTree" />
-    <SUITE FILE_PATH="coverage/devoirALGAV_2018$Unittests_for_AVLTreeTest_MyTestCase_test_fichier_ConstIter.coverage" NAME="Unittests for AVLTreeTest.MyTestCase.test_fichier_ConstIter Coverage Results" MODIFIED="1544973037395" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/test/searchTree" />
+    <SUITE FILE_PATH="coverage/devoirALGAV_2018$Unittests_for_AVLTreeTest_MyTestCase_test_fichier_ConstIter.coverage" NAME="Unittests for AVLTreeTest.MyTestCase.test_fichier_ConstIter Coverage Results" MODIFIED="1545225427808" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/test/searchTree" />
     <SUITE FILE_PATH="coverage/devoirALGAV_2018$Unittests_for_BinaryTreeMinHeapTest_BinaryTreeMinHeapTest_test_fichier_MergeALL.coverage" NAME="Unittests for BinaryTreeMinHeapTest.BinaryTreeMinHeapTest.test_fichier_MergeALL Coverage Results" MODIFIED="1545169415291" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/test/heap" />
     <SUITE FILE_PATH="coverage/devoirALGAV_2018$Unittests_for_AVLTreeTest_MyTestCase_test_search.coverage" NAME="Unittests for AVLTreeTest.MyTestCase.test_search Coverage Results" MODIFIED="1544575138218" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/test/searchTree" />
     <SUITE FILE_PATH="coverage/devoirALGAV_2018$Python_Console__2_.coverage" NAME="Python Console (2) Coverage Results" MODIFIED="1544645741561" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
@@ -76,12 +77,13 @@
     <SUITE FILE_PATH="coverage/devoirALGAV_2018$Unittests_for_AVLTreeTest_MyTestCase_test_something.coverage" NAME="Unittests for AVLTreeTest.MyTestCase.test_something Coverage Results" MODIFIED="1544524533569" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/test/searchTree" />
     <SUITE FILE_PATH="coverage/devoirALGAV_2018$Unittests_for_BinaryTreeMinHeapTest_BinaryTreeMinHeapTest_test_fichier_Merge.coverage" NAME="Unittests for BinaryTreeMinHeapTest.BinaryTreeMinHeapTest.test_fichier_Merge Coverage Results" MODIFIED="1544985226424" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/test/heap" />
     <SUITE FILE_PATH="coverage/devoirALGAV_2018$Unittests_for_MD5Test_MD5Test.coverage" NAME="Unittests for MD5Test.MD5Test Coverage Results" MODIFIED="1544315384654" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/main/hach" />
+    <SUITE FILE_PATH="coverage/devoirALGAV_2018$experiment_cles_alea.coverage" NAME="experiment_cles_alea Coverage Results" MODIFIED="1545212550265" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/main/experiment" />
     <SUITE FILE_PATH="coverage/devoirALGAV_2018$Unittests_for_binomialHeapV2_test_BinomialHeapTest_test_ConsIter.coverage" NAME="Unittests for binomialHeapV2_test.BinomialHeapTest.test_ConsIter Coverage Results" MODIFIED="1544686947903" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/test/binomialHeap" />
     <SUITE FILE_PATH="coverage/devoirALGAV_2018$Unittests_for_binomialHeapV2_test_BinomialHeapTest_test_size_1.coverage" NAME="Unittests for binomialHeapV2_test.BinomialHeapTest.test_size_1 Coverage Results" MODIFIED="1545083143591" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/test/binomialHeap" />
     <SUITE FILE_PATH="coverage/devoirALGAV_2018$Unittests_for_AVLTreeTest_MyTestCase_test_search_delete_int.coverage" NAME="Unittests for AVLTreeTest.MyTestCase.test_search_delete_int Coverage Results" MODIFIED="1545116074565" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/test/searchTree" />
-    <SUITE FILE_PATH="coverage/devoirALGAV_2018$FileReader.coverage" NAME="FileReader Coverage Results" MODIFIED="1544998416689" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/main" />
+    <SUITE FILE_PATH="coverage/devoirALGAV_2018$FileReader.coverage" NAME="FileReader Coverage Results" MODIFIED="1545210814012" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/main" />
     <SUITE FILE_PATH="coverage/devoirALGAV_2018$Python_Console.coverage" NAME="Python Console Coverage Results" MODIFIED="1544630745726" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
-    <SUITE FILE_PATH="coverage/devoirALGAV_2018$Unittests_for_AVLTreeTest_MyTestCase_test_fichier_Insert.coverage" NAME="Unittests for AVLTreeTest.MyTestCase.test_fichier_Insert Coverage Results" MODIFIED="1545116579300" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/test/searchTree" />
+    <SUITE FILE_PATH="coverage/devoirALGAV_2018$Unittests_for_AVLTreeTest_MyTestCase_test_fichier_Insert.coverage" NAME="Unittests for AVLTreeTest.MyTestCase.test_fichier_Insert Coverage Results" MODIFIED="1545224675604" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/test/searchTree" />
     <SUITE FILE_PATH="coverage/devoirALGAV_2018$Unittests_for_ArrayMinHeapTest_ArrayMinHeapTeat_test_fichier_MergeALL.coverage" NAME="Unittests for ArrayMinHeapTest.ArrayMinHeapTeat.test_fichier_MergeALL Coverage Results" MODIFIED="1545166726251" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/test/heap" />
     <SUITE FILE_PATH="coverage/devoirALGAV_2018$testV2.coverage" NAME="testV2 Coverage Results" MODIFIED="1544291139027" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
     <SUITE FILE_PATH="coverage/devoirALGAV_2018$Python_Console__1_.coverage" NAME="Python Console (1) Coverage Results" MODIFIED="1544645603359" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
@@ -94,7 +96,7 @@
     <SUITE FILE_PATH="coverage/devoirALGAV_2018$Unittests_for_src_binomialHeapV2_test_BinomialHeapTest.coverage" NAME="Unittests for src.binomialHeapV2_test.BinomialHeapTest Coverage Results" MODIFIED="1544279832183" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/devoirALGAV_2018$Unittests_for_binomialheap_test_BinomialHeapTest_test_size_2.coverage" NAME="Unittests for binomialheap-test.BinomialHeapTest.test_size_2 Coverage Results" MODIFIED="1544258790413" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
     <SUITE FILE_PATH="coverage/devoirALGAV_2018$__init__.coverage" NAME="__init__ Coverage Results" MODIFIED="1545140981804" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/main/experiment" />
-    <SUITE FILE_PATH="coverage/devoirALGAV_2018$Unittests_for_BinaryTreeMinHeapTest_BinaryTreeMinHeapTest_test_fichier_ConstIter.coverage" NAME="Unittests for BinaryTreeMinHeapTest.BinaryTreeMinHeapTest.test_fichier_ConstIter Coverage Results" MODIFIED="1545094832100" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/test/heap" />
+    <SUITE FILE_PATH="coverage/devoirALGAV_2018$Unittests_for_BinaryTreeMinHeapTest_BinaryTreeMinHeapTest_test_fichier_ConstIter.coverage" NAME="Unittests for BinaryTreeMinHeapTest.BinaryTreeMinHeapTest.test_fichier_ConstIter Coverage Results" MODIFIED="1545254414433" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/test/heap" />
     <SUITE FILE_PATH="coverage/devoirALGAV_2018$Unittests_for_binomialHeapV2_test_BinomialHeapTest_test_fichier_Merge2.coverage" NAME="Unittests for binomialHeapV2_test.BinomialHeapTest.test_fichier_Merge2 Coverage Results" MODIFIED="1544982517545" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/test/binomialHeap" />
     <SUITE FILE_PATH="coverage/devoirALGAV_2018$Unittests_for_binomialHeapV2_test_BinomialHeapTest_test_fichier_ConstIter.coverage" NAME="Unittests for binomialHeapV2_test.BinomialHeapTest.test_fichier_ConstIter Coverage Results" MODIFIED="1545129347753" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/test/binomialHeap" />
     <SUITE FILE_PATH="coverage/devoirALGAV_2018$Unittests_for_BinaryTreeMinHeapTest_BinaryTreeMinHeapTest_test_consIterInt.coverage" NAME="Unittests for BinaryTreeMinHeapTest.BinaryTreeMinHeapTest.test_consIterInt Coverage Results" MODIFIED="1544664348389" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/test/heap" />
@@ -114,78 +116,98 @@
     <select />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.5">
-      <split-first>
-        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main/experiment/__init__.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="351">
-                  <caret line="313" column="28" selection-start-line="313" selection-start-column="28" selection-end-line="313" selection-end-column="28" />
-                  <folding>
-                    <element signature="e#0#11#0" expanded="true" />
-                    <element signature="e#3796#6784#0" />
-                    <element signature="e#6813#9385#0" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main/hach/__init__.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="176">
-                  <caret line="11" column="11" lean-forward="true" selection-start-line="11" selection-start-column="11" selection-end-line="11" selection-end-column="11" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/src/main/hach/MD5_V2.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="112">
-                  <caret line="7" column="64" selection-start-line="7" selection-start-column="64" selection-end-line="7" selection-end-column="64" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main/hach/MD5.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state>
-                  <caret selection-end-line="3" selection-end-column="18" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/test/hach/MD5Test.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="416">
-                  <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="26" />
-                  <folding>
-                    <element signature="e#0#10#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-first>
-      <split-second>
-        <leaf>
-          <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/src/main/hach/MD5.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="415">
-                  <caret line="34" column="49" selection-start-line="34" selection-start-column="49" selection-end-line="34" selection-end-column="49" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-second>
-    </splitter>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/searchTree/AVLTreeTest.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-499">
+              <caret line="182" column="25" selection-start-line="182" selection-start-column="25" selection-end-line="182" selection-end-column="25" />
+              <folding>
+                <element signature="e#0#13#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/searchTree/AVLTree.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="96">
+              <caret line="6" column="22" lean-forward="true" selection-start-line="6" selection-start-column="22" selection-end-line="6" selection-end-column="22" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/heap/ArrayMinHeapTest.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="274">
+              <caret line="234" selection-start-line="234" selection-end-line="234" />
+              <folding>
+                <element signature="e#0#13#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/heap/TreeMinHeap/BinaryTreeHeapNode.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="157">
+              <caret line="68" column="15" selection-start-line="68" selection-start-column="15" selection-end-line="68" selection-end-column="15" />
+              <folding>
+                <element signature="e#0#35#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/heap/TreeMinHeap/BinaryTreeMinHeap.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="797">
+              <caret line="327" column="9" selection-start-line="327" selection-start-column="4" selection-end-line="327" selection-end-column="9" />
+              <folding>
+                <element signature="e#3#21#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/heap/BinaryTreeMinHeapTest.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-981">
+              <caret line="104" column="28" selection-start-line="104" selection-start-column="28" selection-end-line="104" selection-end-column="28" />
+              <folding>
+                <element signature="e#0#10#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/devoir_prog_AlgAv_2018_arbre.ipynb">
+          <provider selected="true" editor-type-id="ipnb-editor">
+            <state>
+              <selected id="25" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/FileReader.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-224">
+              <caret line="34" column="9" lean-forward="true" selection-start-line="34" selection-start-column="9" selection-end-line="34" selection-end-column="9" />
+              <folding>
+                <element signature="e#0#9#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -197,22 +219,9 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>print</find>
-      <find>swap</find>
-      <find>def insert</find>
-      <find />
-      <find>de</find>
-      <find>def in</find>
-      <find>def edit_he</find>
-      <find>def inse</find>
-      <find>edit_height</find>
-      <find>edit_heights(</find>
-      <find>self.requilibrage</find>
-      <find>self.edit_heights()</find>
       <find>def insrt</find>
       <find>la ha</find>
       <find>key :</find>
-      <find>def de</find>
       <find>dom</find>
       <find>dele</find>
       <find>insert(</find>
@@ -222,11 +231,24 @@
       <find>p</find>
       <find>binaryTreeMinHeap</find>
       <find>sear</find>
-      <find>Cons</find>
-      <find>def C</find>
       <find>Node</find>
-      <find>sortDic = OrderedDict(a.items())</find>
       <find>nb_foreach_file</find>
+      <find>a :</find>
+      <find>def Co</find>
+      <find>def de</find>
+      <find>sortDic = OrderedDict(a.items())</find>
+      <find>echange</find>
+      <find>def C</find>
+      <find>DEF aj</find>
+      <find>def ConsIter</find>
+      <find>def Con</find>
+      <find>Cons</find>
+      <find>def aj</find>
+      <find>echan</find>
+      <find>def in</find>
+      <find>def is</find>
+      <find>echangeConstW</find>
+      <find>print</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -266,29 +288,32 @@
         <option value="$PROJECT_DIR$/src/test/heap/ArrauMinHeapTest.py" />
         <option value="$PROJECT_DIR$/src/main/searchTree/__init__.py" />
         <option value="$PROJECT_DIR$/src/main/hach/MD5.py" />
-        <option value="$PROJECT_DIR$/src/test/searchTree/AVLTreeTest.py" />
-        <option value="$PROJECT_DIR$/src/main/searchTree/AVLTree.py" />
-        <option value="$PROJECT_DIR$/src/main/FileReader.py" />
-        <option value="$PROJECT_DIR$/src/main/devoir_prog_AlgAv_2018_arbre.ipynb" />
-        <option value="$PROJECT_DIR$/src/main/heap/TreeMinHeap/BinaryTreeMinHeap.py" />
-        <option value="$PROJECT_DIR$/src/main/heap/TreeMinHeap/BinaryTreeHeapNode.py" />
         <option value="$PROJECT_DIR$/src/main/heap/ArrayMinHeap.py" />
-        <option value="$PROJECT_DIR$/src/test/heap/BinaryTreeMinHeapTest.py" />
         <option value="$PROJECT_DIR$/src/test/heap/ArrayMinHeapTest.py" />
         <option value="$PROJECT_DIR$/src/main/binomialHeap/binomialHeapV2.py" />
         <option value="$PROJECT_DIR$/src/test/binomialHeap/binomialHeapV2_test.py" />
-        <option value="$PROJECT_DIR$/src/test/binomialHeap/binomialHeapTest.py" />
         <option value="$PROJECT_DIR$/src/main/experiment/__init__.py" />
         <option value="$PROJECT_DIR$/src/main/hach/__init__.py" />
         <option value="$PROJECT_DIR$/src/main/hach/MD5_V2.py" />
+        <option value="$PROJECT_DIR$/src/main/experiment/experiment_cles_alea.py" />
+        <option value="$PROJECT_DIR$/src/main/experiment/experiment_Shakespeare.py" />
+        <option value="$PROJECT_DIR$/src/main/searchTree/AVLTree.py" />
+        <option value="$PROJECT_DIR$/src/main/FileReader.py" />
+        <option value="$PROJECT_DIR$/src/test/binomialHeap/binomialHeapTest.py" />
+        <option value="$PROJECT_DIR$/src/test/heap/BinaryTreeMinHeapTest.py" />
+        <option value="$PROJECT_DIR$/src/test/searchTree/AVLTreeTest.py" />
+        <option value="$PROJECT_DIR$/src/main/print_tree.ipynb" />
+        <option value="$PROJECT_DIR$/src/main/devoir_prog_AlgAv_2018_arbre.ipynb" />
+        <option value="$PROJECT_DIR$/src/main/heap/TreeMinHeap/BinaryTreeHeapNode.py" />
+        <option value="$PROJECT_DIR$/src/main/heap/TreeMinHeap/BinaryTreeMinHeap.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="4">
-    <option name="x" value="2701" />
-    <option name="y" value="-2" />
-    <option name="width" value="2105" />
-    <option name="height" value="1442" />
+    <option name="x" value="67" />
+    <option name="y" value="27" />
+    <option name="width" value="1299" />
+    <option name="height" value="741" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -296,7 +321,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -320,7 +344,22 @@
               <item name="devoirALGAV_2018" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="hach" type="462c0819:PsiDirectoryNode" />
+              <item name="binomialHeap" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="devoirALGAV_2018" type="b2602c69:ProjectViewProjectNode" />
+              <item name="devoirALGAV_2018" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="heap" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="devoirALGAV_2018" type="b2602c69:ProjectViewProjectNode" />
+              <item name="devoirALGAV_2018" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="heap" type="462c0819:PsiDirectoryNode" />
+              <item name="TreeMinHeap" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="devoirALGAV_2018" type="b2602c69:ProjectViewProjectNode" />
@@ -333,12 +372,34 @@
               <item name="devoirALGAV_2018" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="binomialHeap" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="devoirALGAV_2018" type="b2602c69:ProjectViewProjectNode" />
+              <item name="devoirALGAV_2018" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
               <item name="hach" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="devoirALGAV_2018" type="b2602c69:ProjectViewProjectNode" />
+              <item name="devoirALGAV_2018" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="heap" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="devoirALGAV_2018" type="b2602c69:ProjectViewProjectNode" />
+              <item name="devoirALGAV_2018" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="searchTree" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -355,6 +416,9 @@
     </option>
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/experiment" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/test/binomialHeap" />
       <recent name="$PROJECT_DIR$/src/main/binomialHeap" />
@@ -375,7 +439,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python tests.Unittests for src.test.binomialHeap.binomialHeapTest.BinomialHeapTest.test_fichier_MergeALL">
+  <component name="RunManager" selected="Python tests.Unittests for BinaryTreeMinHeapTest.BinaryTreeMinHeapTest.test_fichier_ConstIter">
     <configuration name="devoirALGAV_2018" type="JupiterNotebook" factoryName="Jupyter Notebook">
       <module name="devoirALGAV_2018" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -394,7 +458,74 @@
       <option name="ipnbPort" value="8888" />
       <method v="2" />
     </configuration>
-    <configuration name="Unittests for BinaryTreeMinHeapTest.BinaryTreeMinHeapTest.test_fichier_MergeALL" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+    <configuration name="BinaryTreeMinHeap" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="devoirALGAV_2018" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/main/heap/TreeMinHeap" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/main/heap/TreeMinHeap/BinaryTreeMinHeap.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Unittests for AVLTreeTest.MyTestCase.test_fichier_ConstIter" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+      <module name="devoirALGAV_2018" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/test/searchTree" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;AVLTreeTest.MyTestCase.test_fichier_ConstIter&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Unittests for AVLTreeTest.MyTestCase.test_fichier_Insert" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+      <module name="devoirALGAV_2018" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/test/searchTree" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;AVLTreeTest.MyTestCase.test_fichier_Insert&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Unittests for AVLTreeTest.MyTestCase.test_fichier_Merge" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+      <module name="devoirALGAV_2018" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/test/searchTree" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;AVLTreeTest.MyTestCase.test_fichier_Merge&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Unittests for BinaryTreeMinHeapTest.BinaryTreeMinHeapTest.test_fichier_ConstIter" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
       <module name="devoirALGAV_2018" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -405,77 +536,17 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;BinaryTreeMinHeapTest.BinaryTreeMinHeapTest.test_fichier_MergeALL&quot;" />
-      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
-      <method v="2" />
-    </configuration>
-    <configuration name="Unittests for src.test.binomialHeap.binomialHeapTest.BinomialHeapTest.test_fichier_Ajout" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
-      <module name="devoirALGAV_2018" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/test/binomialHeap" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;src.test.binomialHeap.binomialHeapTest.BinomialHeapTest.test_fichier_Ajout&quot;" />
-      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
-      <method v="2" />
-    </configuration>
-    <configuration name="Unittests for src.test.binomialHeap.binomialHeapTest.BinomialHeapTest.test_fichier_ConsIter" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
-      <module name="devoirALGAV_2018" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/test/binomialHeap" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;src.test.binomialHeap.binomialHeapTest.BinomialHeapTest.test_fichier_ConsIter&quot;" />
-      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
-      <method v="2" />
-    </configuration>
-    <configuration name="Unittests for src.test.binomialHeap.binomialHeapTest.BinomialHeapTest.test_fichier_MergeALL" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
-      <module name="devoirALGAV_2018" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/test/binomialHeap" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;src.test.binomialHeap.binomialHeapTest.BinomialHeapTest.test_fichier_MergeALL&quot;" />
-      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
-      <method v="2" />
-    </configuration>
-    <configuration name="Unittests for src.test.binomialHeap.binomialHeapTest.BinomialHeapTest.test_fichier_SuppMin" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
-      <module name="devoirALGAV_2018" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/test/binomialHeap" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;src.test.binomialHeap.binomialHeapTest.BinomialHeapTest.test_fichier_SuppMin&quot;" />
+      <option name="_new_target" value="&quot;BinaryTreeMinHeapTest.BinaryTreeMinHeapTest.test_fichier_ConstIter&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python tests.Unittests for src.test.binomialHeap.binomialHeapTest.BinomialHeapTest.test_fichier_MergeALL" />
-        <item itemvalue="Python tests.Unittests for src.test.binomialHeap.binomialHeapTest.BinomialHeapTest.test_fichier_ConsIter" />
-        <item itemvalue="Python tests.Unittests for src.test.binomialHeap.binomialHeapTest.BinomialHeapTest.test_fichier_Ajout" />
-        <item itemvalue="Python tests.Unittests for src.test.binomialHeap.binomialHeapTest.BinomialHeapTest.test_fichier_SuppMin" />
-        <item itemvalue="Python tests.Unittests for BinaryTreeMinHeapTest.BinaryTreeMinHeapTest.test_fichier_MergeALL" />
+        <item itemvalue="Python tests.Unittests for BinaryTreeMinHeapTest.BinaryTreeMinHeapTest.test_fichier_ConstIter" />
+        <item itemvalue="Python.BinaryTreeMinHeap" />
+        <item itemvalue="Python tests.Unittests for AVLTreeTest.MyTestCase.test_fichier_Merge" />
+        <item itemvalue="Python tests.Unittests for AVLTreeTest.MyTestCase.test_fichier_ConstIter" />
+        <item itemvalue="Python tests.Unittests for AVLTreeTest.MyTestCase.test_fichier_Insert" />
       </list>
     </recent_temporary>
   </component>
@@ -500,45 +571,46 @@
       <workItem from="1544703586193" duration="16617000" />
       <workItem from="1544820177918" duration="66698000" />
       <workItem from="1544977695165" duration="74434000" />
+      <workItem from="1545208714173" duration="30448000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="Unittests_for_ArrayMinHeapTest_ArrayMinHeapTeat_test_fichier_Merge - 2018.12.18 at 21h 48m 20s.xml">
-      <configuration name="Unittests for ArrayMinHeapTest.ArrayMinHeapTeat.test_fichier_Merge" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Unittests_for_ArrayMinHeapTest_ArrayMinHeapTeat_test_fichier_Merge - 2018.12.18 at 21h 48m 43s.xml">
-      <configuration name="Unittests for ArrayMinHeapTest.ArrayMinHeapTeat.test_fichier_Merge" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Unittests_for_ArrayMinHeapTest_ArrayMinHeapTeat_test_fichier_MergeALL - 2018.12.18 at 22h 00m 04s.xml">
-      <configuration name="Unittests for ArrayMinHeapTest.ArrayMinHeapTeat.test_fichier_MergeALL" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Unittests_for_BinaryTreeMinHeapTest_BinaryTreeMinHeapTest_test_fichier_MergeALL - 2018.12.18 at 22h 42m 55s.xml">
-      <configuration name="Unittests for BinaryTreeMinHeapTest.BinaryTreeMinHeapTest.test_fichier_MergeALL" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Unittests_for_BinaryTreeMinHeapTest_BinaryTreeMinHeapTest_test_fichier_MergeALL - 2018.12.18 at 22h 45m 15s.xml">
-      <configuration name="Unittests for BinaryTreeMinHeapTest.BinaryTreeMinHeapTest.test_fichier_MergeALL" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Unittests_for_binomialHeapV2_test_BinomialHeapTest_test_fichier_MergeALL - 2018.12.18 at 23h 30m 34s.xml">
-      <configuration name="Unittests for binomialHeapV2_test.BinomialHeapTest.test_fichier_MergeALL" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Unittests_for_binomialHeapV2_test_BinomialHeapTest_test_fichier_SuppMin - 2018.12.19 at 00h 37m 56s.xml">
-      <configuration name="Unittests for binomialHeapV2_test.BinomialHeapTest.test_fichier_SuppMin" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Unittests_for_binomialHeapV2_test_BinomialHeapTest_test_fichier_Ajout - 2018.12.19 at 00h 38m 07s.xml">
-      <configuration name="Unittests for binomialHeapV2_test.BinomialHeapTest.test_fichier_Ajout" configurationId="tests" />
-    </history-entry>
     <history-entry file="Unittests_for_binomialHeapV2_test_BinomialHeapTest_test_fichier_ConsIter - 2018.12.19 at 00h 38m 44s.xml">
       <configuration name="Unittests for binomialHeapV2_test.BinomialHeapTest.test_fichier_ConsIter" configurationId="tests" />
     </history-entry>
     <history-entry file="Unittests_for_binomialHeapV2_test_BinomialHeapTest_test_fichier_MergeALL - 2018.12.19 at 00h 41m 04s.xml">
       <configuration name="Unittests for binomialHeapV2_test.BinomialHeapTest.test_fichier_MergeALL" configurationId="tests" />
     </history-entry>
+    <history-entry file="Unittests_for_BinaryTreeMinHeapTest_BinaryTreeMinHeapTest_test_fichier_SuppMin - 2018.12.19 at 11h 19m 58s.xml">
+      <configuration name="Unittests for BinaryTreeMinHeapTest.BinaryTreeMinHeapTest.test_fichier_SuppMin" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_for_AVLTreeTest_MyTestCase_test_fichier_Search - 2018.12.19 at 13h 55m 35s.xml">
+      <configuration name="Unittests for AVLTreeTest.MyTestCase.test_fichier_Search" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_for_AVLTreeTest_MyTestCase_test_fichier_Search_Delete - 2018.12.19 at 14h 03m 23s.xml">
+      <configuration name="Unittests for AVLTreeTest.MyTestCase.test_fichier_Search_Delete" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_for_AVLTreeTest_MyTestCase_test_fichier_Insert - 2018.12.19 at 14h 05m 17s.xml">
+      <configuration name="Unittests for AVLTreeTest.MyTestCase.test_fichier_Insert" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_for_AVLTreeTest_MyTestCase_test_fichier_ConstIter - 2018.12.19 at 14h 17m 51s.xml">
+      <configuration name="Unittests for AVLTreeTest.MyTestCase.test_fichier_ConstIter" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_for_AVLTreeTest_MyTestCase_test_fichier_Merge - 2018.12.19 at 14h 24m 30s.xml">
+      <configuration name="Unittests for AVLTreeTest.MyTestCase.test_fichier_Merge" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_for_BinaryTreeMinHeapTest_BinaryTreeMinHeapTest_test_fichier_ConstIter - 2018.12.19 at 16h 31m 01s.xml">
+      <configuration name="Unittests for BinaryTreeMinHeapTest.BinaryTreeMinHeapTest.test_fichier_ConstIter" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_for_BinaryTreeMinHeapTest_BinaryTreeMinHeapTest_test_fichier_ConstIter - 2018.12.19 at 22h 20m 33s.xml">
+      <configuration name="Unittests for BinaryTreeMinHeapTest.BinaryTreeMinHeapTest.test_fichier_ConstIter" configurationId="tests" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="370971000" />
+    <option name="totallyTimeSpent" value="401419000" />
   </component>
-  <component name="TodoView" selected-index="1">
+  <component name="TodoView">
     <todo-panel id="selected-file">
       <is-autoscroll-to-source value="true" />
     </todo-panel>
@@ -548,24 +620,23 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="2701" y="-2" width="2105" height="1442" extended-state="4" />
-    <editor active="true" />
+    <frame x="67" y="27" width="1299" height="741" extended-state="4" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.14057198" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4972973" visible="true" weight="0.1893397" />
+      <window_info id="Structure" order="1" sideWeight="0.5027027" side_tool="true" weight="0.1893397" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32954547" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49960223" visible="true" weight="0.23845571" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.27327782" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4988067" weight="0.4016129" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.35" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" weight="0.32954547" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32903227" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
-      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5003978" side_tool="true" weight="0.27974278" />
-      <window_info anchor="bottom" id="Terminal" order="11" weight="0.29421222" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50119334" side_tool="true" weight="0.27580646" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="11" visible="true" weight="0.29354838" />
       <window_info anchor="bottom" id="Python Console" order="12" weight="0.32305196" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -578,15 +649,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/test2.py" />
-    <entry file="file://$USER_HOME$/Documents/STL/ALGAV/devoir/arbres.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="28" selection-start-line="15" selection-start-column="28" selection-end-line="15" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test3.py" />
     <entry file="file://$PROJECT_DIR$/src/testV2.py" />
     <entry file="file://$PROJECT_DIR$/venv/lib/python3.6/site-packages/numpy/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -698,16 +760,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/experiment/__init__.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/searchTree/AVLTree.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="14">
-          <caret line="1" selection-start-line="1" selection-end-line="1" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/experiment/__init__.html" />
     <entry file="file://$APPLICATION_HOME_DIR$/helpers/typeshed/stdlib/3/collections/__init__.pyi">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="199">
@@ -715,77 +768,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/devoir_prog_AlgAv_2018_arbre.ipynb">
-      <provider selected="true" editor-type-id="ipnb-editor">
-        <state>
-          <selected id="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/heap/TreeMinHeap/BinaryTreeHeapNode.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1216">
-          <caret line="76" column="14" selection-start-line="76" selection-start-column="14" selection-end-line="76" selection-end-column="14" />
-          <folding>
-            <element signature="e#0#35#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/FileReader.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-7">
-          <caret line="17" column="48" selection-start-line="17" selection-start-column="48" selection-end-line="17" selection-end-column="48" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/requirements.txt">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/heap/ArrayMinHeap.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="217">
-          <caret line="190" column="19" lean-forward="true" selection-start-line="190" selection-start-column="19" selection-end-line="190" selection-end-column="19" />
-          <folding>
-            <element signature="e#0#13#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/heap/ArrayMinHeapTest.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3744">
-          <caret line="234" selection-start-line="234" selection-end-line="234" />
-          <folding>
-            <element signature="e#0#13#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/heap/TreeMinHeap/BinaryTreeMinHeap.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-128">
-          <caret line="4" column="11" selection-start-line="4" selection-start-column="11" selection-end-line="4" selection-end-column="11" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/test.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="655">
           <caret line="146" column="13" lean-forward="true" selection-start-line="146" selection-start-column="13" selection-end-line="146" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/binomialHeap/binomialHeapTest.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="544">
-          <caret line="34" column="43" selection-start-line="34" selection-start-column="43" selection-end-line="34" selection-end-column="43" />
-          <folding>
-            <element signature="e#0#13#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -799,49 +788,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/heap/BinaryTreeMinHeapTest.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="320">
-          <caret line="20" column="25" lean-forward="true" selection-start-line="20" selection-start-column="25" selection-end-line="20" selection-end-column="25" />
-          <folding>
-            <element signature="e#0#10#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/searchTree/AVLTreeTest.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3024">
-          <caret line="189" lean-forward="true" selection-start-line="189" selection-end-line="189" />
-          <folding>
-            <element signature="e#0#13#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/experiment/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="351">
-          <caret line="313" column="28" selection-start-line="313" selection-start-column="28" selection-end-line="313" selection-end-column="28" />
-          <folding>
-            <element signature="e#0#11#0" expanded="true" />
-            <element signature="e#3796#6784#0" />
-            <element signature="e#6813#9385#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/hach/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="11" column="11" lean-forward="true" selection-start-line="11" selection-start-column="11" selection-end-line="11" selection-end-column="11" />
+        <state relative-caret-position="128">
+          <caret line="8" selection-start-line="8" selection-end-line="9" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/hach/MD5Test.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="416">
-          <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="26" />
+        <state relative-caret-position="413">
+          <caret line="26" selection-start-line="26" selection-end-line="26" />
           <folding>
             <element signature="e#0#10#0" expanded="true" />
           </folding>
@@ -850,15 +807,143 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/hach/MD5.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-line="3" selection-end-column="18" />
+        <state relative-caret-position="16">
+          <caret line="28" column="17" lean-forward="true" selection-start-line="28" selection-start-column="17" selection-end-line="28" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/experiment/experiment_Shakespeare.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1218">
+          <caret line="281" column="42" lean-forward="true" selection-start-line="281" selection-start-column="42" selection-end-line="281" selection-end-column="42" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/experiment/experiment_cles_alea.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="308">
+          <caret line="236" selection-start-line="236" selection-end-line="236" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/hach/MD5_V2.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="112">
-          <caret line="7" column="64" selection-start-line="7" selection-start-column="64" selection-end-line="7" selection-end-column="64" />
+        <state relative-caret-position="224">
+          <caret line="14" column="33" lean-forward="true" selection-start-line="14" selection-start-column="33" selection-end-line="14" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/binomialHeap/binomialHeapTest.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="273">
+          <caret line="258" selection-start-line="258" selection-end-line="258" />
+          <folding>
+            <element signature="e#0#13#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/heap/ArrayMinHeap.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="275">
+          <caret line="121" column="8" selection-start-line="121" selection-start-column="8" selection-end-line="121" selection-end-column="8" />
+          <folding>
+            <element signature="e#0#13#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/print_tree.ipynb">
+      <provider selected="true" editor-type-id="ipnb-editor">
+        <state>
+          <selected id="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/searchTree/AVLTreeTest.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-499">
+          <caret line="182" column="25" selection-start-line="182" selection-start-column="25" selection-end-line="182" selection-end-column="25" />
+          <folding>
+            <element signature="e#0#13#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/FileReader.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-224">
+          <caret line="34" column="9" lean-forward="true" selection-start-line="34" selection-start-column="9" selection-end-line="34" selection-end-column="9" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/searchTree/AVLTree.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="96">
+          <caret line="6" column="22" lean-forward="true" selection-start-line="6" selection-start-column="22" selection-end-line="6" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/Untitled.ipynb">
+      <provider selected="true" editor-type-id="ipnb-editor">
+        <state>
+          <selected id="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/devoir_prog_AlgAv_2018_arbre.ipynb">
+      <provider selected="true" editor-type-id="ipnb-editor">
+        <state>
+          <selected id="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/heap/TreeMinHeap/BinaryTreeHeapNode.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="157">
+          <caret line="68" column="15" selection-start-line="68" selection-start-column="15" selection-end-line="68" selection-end-column="15" />
+          <folding>
+            <element signature="e#0#35#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/heap/ArrayMinHeapTest.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="274">
+          <caret line="234" selection-start-line="234" selection-end-line="234" />
+          <folding>
+            <element signature="e#0#13#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/heap/BinaryTreeMinHeapTest.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-981">
+          <caret line="104" column="28" selection-start-line="104" selection-start-column="28" selection-end-line="104" selection-end-column="28" />
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/heap/TreeMinHeap/BinaryTreeMinHeap.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="797">
+          <caret line="327" column="9" selection-start-line="327" selection-start-column="4" selection-end-line="327" selection-end-column="9" />
+          <folding>
+            <element signature="e#3#21#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

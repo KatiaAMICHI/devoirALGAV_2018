@@ -1,5 +1,3 @@
-# TODO changer la méthode retation; utilisant celle vu en td
-
 from src.main.FileReader import inf, sup
 
 DEB = 2

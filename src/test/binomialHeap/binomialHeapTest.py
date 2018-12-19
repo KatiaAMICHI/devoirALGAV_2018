@@ -256,4 +256,3 @@ class BinomialHeapTest(unittest.TestCase):
 
         pprint.pprint(sortDic)
         plot(sortDic, name='BinomialHeap_MergeALL')
-# TODO nb_foreach_file[f]

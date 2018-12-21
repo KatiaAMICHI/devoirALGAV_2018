@@ -17,31 +17,64 @@ class BinaryTreeMinHeap(object):
         self.nbElem = 0
 
     def getroot(self):
+        """
+        Retourne la racine de l'arbre
+        :return: la racine
+        """
         return self.root
 
     def set_root(self, root):
+        """
+        Changer la racine de l'arbre
+        :param root:
+        """
         self.root.key = root.key
 
     def get_last(self):
+        """
+        Obtenir la dernier element
+        :return: renvoie le dernier element
+        """
         return self.last
 
     def set_last(self, last):
+        """
+        Changer last element
+        :param last:
+        """
         self.last.key = last
 
     def get_nbElem(self):
+        """
+
+        :return: le nombre d'element
+        """
         return self.nbElem
 
     def nb_node(self):
+        """
+
+        :return: le nombre de noeaud dans l'arbre
+        """
         return self.nbElem - (self.nbElem + 1) / 2
 
     def get_hauteur(self):
+        """
+
+        :return: renvoie la hauteur de l'arbre
+        """
         h = log(self.nbElem, 2)  # math.log(number,base)
         if h > floor(h):
             return floor(h) + 1
         return h
 
-    # si on met a jour alors mtr a la valeur True dans le cas contraire False
     def insert(self, val, mtr=True):
+        """
+        Ajouter une valeur dans l'arbre
+
+        :param val: la valeur a ajouter
+        :param mtr: si on met a jour alors mtr a la valeur True dans le cas contraire False
+        """
         node = Node(val)
         num = self.nbElem + 1
 
@@ -65,8 +98,8 @@ class BinaryTreeMinHeap(object):
             instru.append(self.last)
             currant = self.last.parent
 
-            # O(log(n) || trouver la permiere hauteur avec un autre _child droit
-            # tant que {\displaystyle x} x n'est pas la root de l arbre
+            # O(log(n) || trouver la première hauteur avec un autre _child droit
+            # tant que x n'est pas la root de l arbre
             # et que x est strictement supérieur à son père, on échange les positions de et son père.
             while currant.parent is not None and currant.right in instru:
                 if currant not in instru:
@@ -97,8 +130,10 @@ class BinaryTreeMinHeap(object):
 
         return True
 
-    # O(log(n))
     def updateTree(self):
+        """
+        Permet de metre a jour l'arbre
+        """
         cons = self.last
         new_child = None
 
@@ -120,6 +155,9 @@ class BinaryTreeMinHeap(object):
             new_child = new_child.parent
 
     def isBinaryTreeMinHeap(self):
+        """
+        Permet de vérifier si la structure de l'arbre est bonne
+        """
         cons = self.last
 
         new_child = None
@@ -137,11 +175,22 @@ class BinaryTreeMinHeap(object):
         return True
 
     def printTree(self):
+        """
+        Permet l'affichage de notre arbre
+        :return: une liste contenant les elements dans notre arbre
+        """
         currant = self.root
         if currant is not None:
             return self._printTree(currant, [])
 
     def _printTree(self, root, result):
+        """
+        Permet l'affichage de notre arbre
+
+        :param root: la racine
+        :param result: la liste d'element de l'arbre
+        :return: la liste contenant la liste d'element de l'arbre
+        """
         if root is not None:
             self._printTree(root.left, result)
             result.append(root.key)
@@ -149,6 +198,13 @@ class BinaryTreeMinHeap(object):
         return result
 
     def echangeConstW(self, cons, new_child, bool_left):
+        """
+        faire un swap entre les valeur passer en paramètre
+        :param cons:
+        :param new_child:
+        :param bool_left: si c'est le fils gauche ou pas
+        :return: le résulat de l'échage entre les noeaud
+        """
         tmp1 = cons.key
         cons.key = new_child.key
         new_child.key = tmp1
@@ -172,15 +228,23 @@ class BinaryTreeMinHeap(object):
         return consf.key, consf.right.key
 
     def ajout_simple(self, listElem):
+        """
+        Permet de faire des ajouts simple dans l'arbre
+        :param listElem: liste d'element a ajouter
+        """
         for elem in listElem:
             self.insert(elem, False)
 
     def ConsIter(self, listElem=None, is_tree=False, ajout_simple=True):
 
         """
-        @param listElem - une liste d'elements ordener de sorte a avoir la racine
+        Permet de Contruire un arbre, on parcourant niveaux par niveaux
+
+        :param listElem - une liste d'elements ordener de sorte a avoir la racine
                 suivie du fils droit puis du fils gauche
-        @return true si OK false dans le cas contraire
+        :param is_tree :
+        :param ajout_simple: si on doit faire a jout simple
+        :return true si OK false dans le cas contraire
         """
 
         if ajout_simple and not is_tree and listElem is not None:
@@ -228,6 +292,12 @@ class BinaryTreeMinHeap(object):
             i += 1
 
     def minChild(self, n1, n2):
+        """
+        Renvoie le fils le plus petit
+        :param n1:
+        :param n2:
+        :return: renvoie le fils le plus petit
+        """
         if n1 == n2:
             return n1
         elif inf(n1, n2, DEB, FIN):
@@ -235,32 +305,22 @@ class BinaryTreeMinHeap(object):
         return n2
 
     def echange(self, cons, new_child):
+        """
+        Permet de faire un swap entre deux valeur
+        :param cons: valeur du noeud 1
+        :param new_child: valeur du noeud 1
+        :return: les noeuds avec les valeur echanger
+        """
         tmp1 = cons
         cons = new_child
         new_child = tmp1
         return cons, new_child
 
-    def get_last(self):
-        node = self.last
-
-        while not node.get_parent().get_parent().is_left(node.get_parent()):
-            if node.get_parent() is None:
-                # alors on a atteint la racine
-                node = node.get_left()
-            elif node.get_parent().is_left(node):
-                # si c'est un fils gauche je descend le plus possible
-                while node.get_right() is not None:
-                    node = node.get_right()
-                self.last.key = node.get_parent().get_left()
-            if node.get_parent().is_right(node):
-                node = node.get_parent()
-
-    # O(log(n))
-    # soit l union de deux tas ou mettre le dernier elment a la racine et faire updateTree()
     def deleteMin(self):
         """
-        @param T - Tas min
-        @return la valeur supprimer
+        Supprimer le valeur min de l'arbre
+
+        :return la valeur supprimer
         """
 
         # verifier si A est un arbre vide
@@ -272,14 +332,12 @@ class BinaryTreeMinHeap(object):
             return None
 
         else:
+            # echange de root
             del_min = self.root.key
             self.root.key = self.last.key
-            if self.last.get_parent().is_right(self.last):
-                self.last.key = self.last.get_parent().get_left().key
-            elif self.last.get_parent().is_left(self.last):
-                self.last.key = self.last.get_parent().key
 
             keyMin = self.root
+            # faire une mise a jour de l'arbre
             left = keyMin.get_left()
             right = keyMin.get_right()
             while inf(left.key, keyMin.key, DEB, FIN) or inf(right.key, keyMin.key, DEB, FIN):
@@ -287,11 +345,16 @@ class BinaryTreeMinHeap(object):
                     left.key, keyMin.key = self.echange(left.key, keyMin.key)
                 elif inf(right.key, keyMin.key, DEB, FIN):
                     right.key, keyMin.key = self.echange(right.key, keyMin.key)
+        # update le last element
         self.update_last_element()
         return del_min
 
     def update_last_element(self):
-        # représentation binaire du nombre d'element dans le tas
+        """
+        Update le last element
+            représentation binaire du nombre d'element dans le tas
+        """
+        #
         binrep = np.binary_repr(self.nbElem)[1:]
         i = 0
         current = self.root
@@ -305,18 +368,19 @@ class BinaryTreeMinHeap(object):
 
     def Union(self, T2):
         """
-        @param self - Tas min 1
-        @param T2 - Tas min 2
-        @return un Tas correspondant a l union des deux tas T1 & T2
+        Faire l'union de deux arbre, en ajoutant les elements de la arbre avec le moins d'elements dans l'autre arbre
+
+        :param T2: Tas min
+        :return un Tas correspondant a l union des deux tas T1 & T2
         """
         if not isinstance(T2, BinaryTreeMinHeap):
             raise AssertionError("Error - Tas2 is not instance of BinaryTreeMinHeap")
 
-        # verifier si T1 est nul
+        # verifier si T1 est null
         if self.nbElem == 0:
             return T2
 
-        # verifier si T2 est nul
+        # verifier si T2 est null
         if T2.get_nbElem() == 0:
             return self
 
@@ -325,19 +389,15 @@ class BinaryTreeMinHeap(object):
             elem_T2 = T2.printTree()
             self.ConsIter(elem_T2)
             return self
+        # sinon on ajoute dans T2
         else:
             elem_T1 = self.printTree()
             T2.ConsIter(elem_T1)
             return T2
 
     def plot(self):
+        """
+        Représentation graphique de l'arbre
+        :return: le plot de l'arbre
+        """
         return self.root.plot()
-
-
-if __name__ == '__main__':
-    arbre = BinaryTreeMinHeap()
-    l = [50, 30, 70, 20, 40, 60, 80, 0, 1, 3]
-
-    arbre.ConsIter(l)  # [20, 30, 40, 50, 60, 70, 80]
-
-    print(arbre.printTree())

@@ -11,9 +11,20 @@ class BinomialHeap(object):
         self.head = BinomialHeap.Node()
 
     def is_empty(self):
+        """
+        vérifier si head est null
+        :return true dans le cas où head soit None, False dans le cas contraire
+        :rtype bool
+        """
         return self.head.next is None
 
     def nb_heap(self):
+        """
+        Calcule le nombre de tas dans notre file binomial
+
+        :return:le nombre de tas dans notre file binomial
+        :rtype result : int
+        """
         result = 0
         node = self.head.next
         while node is not None:
@@ -22,6 +33,12 @@ class BinomialHeap(object):
         return result
 
     def get_children(self):
+        """
+        Récuperer la liste de fils d'un noeud
+
+        :return: une list de fils
+        :rtype result : list
+        """
         result = []
         node = self.head.next
         while node is not None:
@@ -30,9 +47,16 @@ class BinomialHeap(object):
         return result
 
     def clear(self):
+        """
+        Clean note file binomial
+        """
         self.head.next = None
 
     def __len__(self):
+        """
+
+        :return:
+        """
         result = 0
         node = self.head.next
         while node is not None:
@@ -43,6 +67,7 @@ class BinomialHeap(object):
     def get_min_value(self):
         """
         cherche la valeur minamal parmit tout les racine des sous arbre
+
         :return: retourne la valeur minimal
         :rtype: int | str
         """
@@ -60,7 +85,9 @@ class BinomialHeap(object):
 
     def get_min_node(self):
         """
-        cherche le noeud avec la valeur minimal parmit tout les racine des sous arbre
+        Cherche le noeud avec la valeur minimal parmit tout les racine des sous arbre
+            génére une erreur dans le cas où la file soit vide
+
         :return: retourne la valeur minimal
         :rtype: BinomialHeap.Node
         """
@@ -79,7 +106,9 @@ class BinomialHeap(object):
 
     def delete_min(self):
         """
-        Supp la valeur minimum
+        Supp la valeur minimum,
+            génére une erreur dans le cas où la file soit vide
+
         :rtype: int | str
         :return return la valeur supprimer
         """
@@ -90,6 +119,8 @@ class BinomialHeap(object):
         node_before_min_value = None
 
         prev_node = self.head
+
+        # checher la racine qui a la valeur minimum
         while True:
             node = prev_node.next
             if node is None:
@@ -102,6 +133,7 @@ class BinomialHeap(object):
         min_node = node_before_min_value.next
         node_before_min_value.next = min_node.next
         min_node.next = None
+        # fusion les sous-fils avec notre structure origine
         self._merge(min_node.remove_root())
         return min_value
 
@@ -114,6 +146,7 @@ class BinomialHeap(object):
     def _insert(self, list_val):
         """
         Ajout de list_val a self, en utilisant _merge entre self et new BinomialHeap pour chaque val de la liste
+        :param list_val : la liste de valeur à ajouter
         :type list_val: list
         """
         for val in list_val:
@@ -136,8 +169,6 @@ class BinomialHeap(object):
         """
         Union entre deux BinomialHeap
         """
-        assert self.head.rank == -1
-        assert other is None or other.rank >= 0
         this = self.head.next
         self.head.next = None
         prevtail = None
@@ -180,6 +211,10 @@ class BinomialHeap(object):
 
     def ConsIter(self, item_list):
         """
+        Construction de la file binomiale avec la liste d'element,
+            en utilisant la décomposition binaire,
+            puis faire appele a la méthode insert
+
         :param item_list: l la liste d'elements a ajouter
         :type: item_list: list
         """
@@ -204,6 +239,9 @@ class BinomialHeap(object):
             i += 1
 
     def is_binomialheap(self):
+        """
+        Vérifier si on respecte bien la structure d'un tas binomial
+        """
         if self.head.value is not None and self.head.rank != -1:
             raise AssertionError("Error - Head must be dummy node")
         self.head.check_is_binomialheap(True, None)
@@ -211,6 +249,11 @@ class BinomialHeap(object):
     class Node(object):
 
         def __init__(self, val=None):
+            """
+            Initialisation du noeaud
+
+            :param val:
+            """
             self.value = val
             if val is None:
                 self.rank = -1
@@ -220,9 +263,17 @@ class BinomialHeap(object):
             self.next = None
 
         def get_rank(self):
+            """
+
+            :return: renvoie la rang du noeud
+            """
             return self.rank
 
         def remove_root(self):
+            """
+
+            :return:
+            """
             assert self.next is None
             result = None
             down_node = self.down
@@ -235,7 +286,7 @@ class BinomialHeap(object):
 
         def check_is_binomialheap(self, is_root, min_result):
             """
-            Check structure of binomialHeap
+            Vérifier la structure d'un tas binomial
             """
             if is_root != (min_result is None):
                 raise AssertionError("Error - Invalid arguments")

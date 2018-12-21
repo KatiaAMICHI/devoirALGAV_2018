@@ -24,18 +24,18 @@ def collisonShakespeare():
     word_dic = {}
 
     for word in words:
-        tree.insert(md5.md5_to_hex(md5.md5(word.encode())))
+        tree.insert(md5.word_md5(word.encode()))
 
     new_list_words = list(set(words))
 
     for word in new_list_words:
-        md5_word = md5.md5_to_hex(md5.md5(bytes(word.encode())))
+        md5_word = md5.word_md5(bytes(word.encode()))
         if tree.search(md5_word):
             try:
                 word_dic[md5_word].append(word)
             except:
                 word_dic[md5_word] = [word]
-
+    print("nb Mot : ", len(new_list_words))
     for a in word_dic.keys():
         if len(word_dic[a]) > 1:
             print('a : ', a, 'word : ', word_dic[a])
@@ -150,12 +150,12 @@ def Ajout_Tas_File(path=None):
         for i in range(0, 5 * int(type_file), int(type_file)):
 
             # AVLTree
-            avlTree = AVLTree()
-            startC_avlTree = time.time()
-            for elem in l1_dic[type_file][old_val:(i + int(type_file))]:
-                avlTree.insert(elem, sort=True)
-            endC_avlTree = time.time() - startC_avlTree
-            endC_avlTree /= len(l1_dic[type_file][old_val:(i + int(type_file))])
+            # avlTree = AVLTree()
+            # startC_avlTree = time.time()
+            # for elem in l1_dic[type_file][old_val:(i + int(type_file))]:
+            #     avlTree.insert(elem, sort=True)
+            # endC_avlTree = time.time() - startC_avlTree
+            # endC_avlTree /= len(l1_dic[type_file][old_val:(i + int(type_file))])
 
             # BinaryTreeMinHeap
             binarytreeminHeap = BinaryTreeMinHeap()
@@ -178,24 +178,24 @@ def Ajout_Tas_File(path=None):
             # assert arrayminheap.is_arrayMinHeap() is True
 
             # BinaryTreeMinHeap
-            binomialheap = BinomialHeap()
-            # binomialheap.ConsIter(l1_dic[type_file][old_val:(i + int(type_file))])
-            startC_binomialheap = time.time()
-            for elem in l1_dic[type_file][old_val:(i + int(type_file))]:
-                binomialheap.insert(elem)
-            endC_binomialheap = time.time() - startC_binomialheap
-            endC_binomialheap /= len(l1_dic[type_file][old_val:(i + int(type_file))])
+            # binomialheap = BinomialHeap()
+            # # binomialheap.ConsIter(l1_dic[type_file][old_val:(i + int(type_file))])
+            # startC_binomialheap = time.time()
+            # for elem in l1_dic[type_file][old_val:(i + int(type_file))]:
+            #     binomialheap.insert(elem)
+            # endC_binomialheap = time.time() - startC_binomialheap
+            # endC_binomialheap /= len(l1_dic[type_file][old_val:(i + int(type_file))])
 
             try:
-                a_avlTree[type_file] += endC_avlTree
+                # a_avlTree[type_file] += endC_avlTree
                 a_binarytreeminHeap[type_file] += endC_binarytreeminHeap
                 a_arrayminheap[type_file] += endC_arrayminheap
-                a_binomialheap[type_file] += endC_binomialheap
+                # a_binomialheap[type_file] += endC_binomialheap
             except:
-                a_avlTree[type_file] = endC_avlTree
+                # a_avlTree[type_file] = endC_avlTree
                 a_binarytreeminHeap[type_file] = endC_binarytreeminHeap
                 a_arrayminheap[type_file] = endC_arrayminheap
-                a_binomialheap[type_file] = endC_binomialheap
+                # a_binomialheap[type_file] = endC_binomialheap
 
             old_val = i + int(type_file)
 
@@ -219,7 +219,8 @@ def Ajout_Tas_File(path=None):
     print("BinomialHeap")
     pprint.pprint(sortDic_binomialheap)
 
-    plot4(sortDic_avlTree, sortDic_binarytreeminHeap, sortDic_arrayminheap, sortDic_binomialheap,
+    plot4(sortDic0=sortDic_avlTree, sortDic1=sortDic_binarytreeminHeap, sortDic2=sortDic_arrayminheap,
+          sortDic3=sortDic_binomialheap,
           n0='AVLTree',
           n1='BinaryTreeMinHeap',
           n2='ArrayMinHeap',
@@ -345,41 +346,40 @@ def Union_Tas_File(path=None):
                 list_elem1 = l1_dic[type_file][old_val:(i + int(type_file))]
                 list_elem2 = l1_dic[type_file2][old_val2:(j + int(type_file2))]
 
-                # AVLTree
-                avlTree1 = AVLTree()
-                avlTree2 = AVLTree()
-                avlTree1.ConsIter(list_elem1)
-                avlTree2.ConsIter(list_elem2)
-
-                startC_avlTree = time.time()
-                avlTree1 = avlTree1.Union(avlTree2)
-                endC_avlTree = time.time() - startC_avlTree
-
+                # # AVLTree
+                # avlTree1 = AVLTree()
+                # avlTree2 = AVLTree()
+                # avlTree1.ConsIter(list_elem1)
+                # avlTree2.ConsIter(list_elem2)
+                #
+                # startC_avlTree = time.time()
+                # avlTree1 = avlTree1.Union(avlTree2)
+                # endC_avlTree = time.time() - startC_avlTree
 
                 # BinaryTreeMinHeap
-                binaryTreeMinHeap1 = BinaryTreeMinHeap()
-                binaryTreeMinHeap2 = BinaryTreeMinHeap()
-
-                binaryTreeMinHeap1.ConsIter(list_elem1)
-                binaryTreeMinHeap2.ConsIter(list_elem2)
-
-                startC_binaryTreeMinHeap = time.time()
-                binaryTreeMinHeap1.Union(binaryTreeMinHeap2)
-                endC_binaryTreeMinHeap = time.time() - startC_binaryTreeMinHeap
+                # binaryTreeMinHeap1 = BinaryTreeMinHeap()
+                # binaryTreeMinHeap2 = BinaryTreeMinHeap()
+                #
+                # binaryTreeMinHeap1.ConsIter(list_elem1)
+                # binaryTreeMinHeap2.ConsIter(list_elem2)
+                #
+                # startC_binaryTreeMinHeap = time.time()
+                # binaryTreeMinHeap1.Union(binaryTreeMinHeap2)
+                # endC_binaryTreeMinHeap = time.time() - startC_binaryTreeMinHeap
 
                 # ArrayMinHeap
-                arrayMinHeap1 = ArrayMinHeap()
-                arrayMinHeap2 = ArrayMinHeap()
-                arrayMinHeap1.ajout_simple(list_elem=list_elem1)
-                arrayMinHeap2.ajout_simple(list_elem=list_elem2)
-                arrayMinHeap1.ConsIterTab(ajout_simple=False)
-                arrayMinHeap2.ConsIterTab(ajout_simple=False)
+                # arrayMinHeap1 = ArrayMinHeap()
+                # arrayMinHeap2 = ArrayMinHeap()
+                # arrayMinHeap1.ajout_simple(list_elem=list_elem1)
+                # arrayMinHeap2.ajout_simple(list_elem=list_elem2)
+                # arrayMinHeap1.ConsIterTab(ajout_simple=False)
+                # arrayMinHeap2.ConsIterTab(ajout_simple=False)
+                #
+                # startC_arrayMinHeap = time.time()
+                # arrayMinHeap1.Union(arrayMinHeap2)
+                # endC_arrayMinHeap = time.time() - startC_arrayMinHeap
 
-                startC_arrayMinHeap = time.time()
-                arrayMinHeap1.Union(arrayMinHeap2)
-                endC_arrayMinHeap = time.time() - startC_arrayMinHeap
-
-                # BinomialHeap
+                # # BinomialHeap
                 binomialHeap1 = BinomialHeap()
                 binomialHeap2 = BinomialHeap()
                 binomialHeap1.ConsIter(list_elem1)
@@ -393,25 +393,25 @@ def Union_Tas_File(path=None):
 
                 try:
                     nb_foreach_file[len_file] += 1
-                    a_avlTree[type_file] += endC_avlTree
-                    a_binarytreeminHeap[type_file] += endC_binaryTreeMinHeap
-                    a_arrayminheap[type_file] += endC_arrayMinHeap
-                    a_binomialheap[type_file] += endC_binomialHeap
+                    # a_avlTree[len_file] += endC_avlTree
+                    #a_binarytreeminHeap[len_file] += endC_binaryTreeMinHeap
+                    #a_arrayminheap[len_file] += endC_arrayMinHeap
+                    a_binomialheap[len_file] += endC_binomialHeap
                 except:
                     nb_foreach_file[len_file] = 1
-                    a_avlTree[type_file] = endC_avlTree
-                    a_binarytreeminHeap[type_file] = endC_binaryTreeMinHeap
-                    a_arrayminheap[type_file] = endC_arrayMinHeap
-                    a_binomialheap[type_file] = endC_binomialHeap
+                    # a_avlTree[len_file] = endC_avlTree
+                    #a_binarytreeminHeap[len_file] = endC_binaryTreeMinHeap
+                    #a_arrayminheap[len_file] = endC_arrayMinHeap
+                    a_binomialheap[len_file] = endC_binomialHeap
 
                 old_val = i + int(type_file)
                 old_val2 = i + int(type_file2)
 
     for e0, e1, e2, e3 in zip(a_avlTree, a_binarytreeminHeap.keys(), a_arrayminheap.keys(), a_binomialheap):
-        a_avlTree[e1] /= nb_foreach_file[e0]
+        # a_avlTree[e1] /= nb_foreach_file[e0]
         a_binarytreeminHeap[e1] /= nb_foreach_file[e0]
         a_arrayminheap[e2] /= nb_foreach_file[e0]
-        a_binomialheap[e3] /= nb_foreach_file[e0]
+        # a_binomialheap[e3] /= nb_foreach_file[e0]
 
     sortDic_avlTree = OrderedDict(sorted(a_avlTree.items(), key=lambda x: int(x[0])))
     sortDic_binarytreeminHeap = OrderedDict(sorted(a_binarytreeminHeap.items(), key=lambda x: int(x[0])))
@@ -426,24 +426,25 @@ def Union_Tas_File(path=None):
     pprint.pprint(sortDic_arrayminheap)
     print("BinomialHeap")
     pprint.pprint(sortDic_binomialheap)
-
-    plot4(sortDic_avlTree, sortDic_binarytreeminHeap, sortDic_arrayminheap, sortDic_binomialheap,
-          n0='AVLTree',
-          n1='BinaryTreeMinHeap',
-          n2='ArrayMinHeap',
-          n3='BinomialHeap',
-          name='Temps d\'exécution de Union sur les fichiers cles_alea')
+    plot(sortDic_binomialheap)
+    # plot4(sortDic0=sortDic_avlTree, sortDic1=sortDic_binarytreeminHeap, sortDic2=sortDic_arrayminheap,
+    #       sortDic3=sortDic_binomialheap,
+    #       n0='AVLTree',
+    #       n1='BinaryTreeMinHeap',
+    #       n2='ArrayMinHeap',
+    #       n3='BinomialHeap',
+    #       name='Temps d\'exécution de Union sur les fichiers cles_alea')
 
 
 if __name__ == '__main__':
     # Question 6.12 / 6.13
 
-    # collisonShakespeare()
+    collisonShakespeare()
 
     # Question 6.&4
 
     # SuppMin_Tas_File()
-    Ajout_Tas_File() #  OK
+    # Ajout_Tas_File()
     # ConsIter_Tas_File()
     # Union_Tas_File()
     pass

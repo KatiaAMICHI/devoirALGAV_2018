@@ -4,7 +4,7 @@ import sys
 import numpy as np
 from bokeh.plotting import figure, show
 
-from src.main.hach import MD5
+from src.main.hach.MD5 import MD5
 
 if sys.version_info.major == 2:
     pass
@@ -77,28 +77,41 @@ def plot3(sortDic1, sortDic2, sortDic3, n1='n1', n2='n2', n3='n3', name='plot'):
     show(p)
 
 
-def plot4(sortDic0, sortDic1, sortDic2, sortDic3, n0='n0', n1='n1', n2='n2', n3='n3', name='plot'):
-    max_x = max(2,
-                int(list(sortDic0.keys())[len(list(sortDic0.keys())) - 1]),
-                int(list(sortDic1.keys())[len(list(sortDic1.keys())) - 1]),
-                int(list(sortDic2.keys())[len(list(sortDic2.keys())) - 1]),
-                int(list(sortDic3.keys())[len(list(sortDic3.keys())) - 1]))
+def plot4(sortDic0=None, sortDic1=None, sortDic2=None, sortDic3=None, n0='n0', n1='n1', n2='n2', n3='n3', name='plot'):
+    if sortDic0 and sortDic3:
+        max_x = max(2,
+                    int(list(sortDic0.keys())[len(list(sortDic0.keys())) - 1]),
+                    int(list(sortDic1.keys())[len(list(sortDic1.keys())) - 1]),
+                    int(list(sortDic2.keys())[len(list(sortDic2.keys())) - 1]),
+                    int(list(sortDic3.keys())[len(list(sortDic3.keys())) - 1]))
+    else:
+            max_x = max(2,
+                        int(list(sortDic1.keys())[len(list(sortDic1.keys())) - 1]),
+                        int(list(sortDic2.keys())[len(list(sortDic2.keys())) - 1]))
+
     max_y = list(sortDic1.values())[len(list(sortDic1.values())) - 1]
+
     p = figure(title=name,
                x_range=(0, max_x),
                y_range=(list(sortDic1.values())[0], max_y),
                background_fill_color="#fafafa")
     # y_axis_type = "log",
-    p.line(list(sortDic0.keys()), list(sortDic0.values()), legend=n0,
+
+    if sortDic0:
+        p.line(list(sortDic0.keys()), list(sortDic0.values()), legend=n0,
            line_color="gold", line_width=2)
 
-    p.line(list(sortDic1.keys()), list(sortDic1.values()), legend=n1)
-    p.circle(list(sortDic1.keys()), list(sortDic1.values()), legend=n1)
+    if sortDic1:
 
-    p.line(list(sortDic2.keys()), list(sortDic2.values()), legend=n2,
+        p.line(list(sortDic1.keys()), list(sortDic1.values()), legend=n1)
+        p.circle(list(sortDic1.keys()), list(sortDic1.values()), legend=n1)
+
+    if sortDic2:
+        p.line(list(sortDic2.keys()), list(sortDic2.values()), legend=n2,
            line_color="navy", line_width=2)
 
-    p.line(list(sortDic3.keys()), list(sortDic3.values()), legend=n3,
+    if sortDic3:
+        p.line(list(sortDic3.keys()), list(sortDic3.values()), legend=n3,
            line_color="coral", line_dash="dotdash", line_width=2)
 
     p.legend.location = "top_left"
@@ -128,6 +141,7 @@ def lectureFicher(file=None):
     data = f.read().rstrip().split()
     return data
 
+
 def fichiers_ShakespeareMD5_file(file=None):
     if file is None:
         file = pathShakespeare_file
@@ -138,7 +152,7 @@ def fichiers_ShakespeareMD5_file(file=None):
     f = open(file, 'r', newline="\n")
     data = f.read().rstrip().split()
     for word in data:
-        dataMD5.append(md5.md5_to_hex(md5.md5(word.encode())))
+        dataMD5.append(md5.word_md5(word.encode()))
     print(dataMD5)
     return dataMD5
 
@@ -153,9 +167,9 @@ def fichiers_ShakespeareMD5():
         data = f.read().rstrip().split()
         for word in data:
             try:
-                data_dic[str(len(data))].append(md5.md5_to_hex(md5.md5(word.encode())))
+                data_dic[str(len(data))].append(md5.word_md5((word.encode())))
             except:
-                data_dic[str(len(data))] = [md5.md5_to_hex(md5.md5(word.encode()))]
+                data_dic[str(len(data))] = [md5.word_md5(word.encode())]
 
     return data_dic
 

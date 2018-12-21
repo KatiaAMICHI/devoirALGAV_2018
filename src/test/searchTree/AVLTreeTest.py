@@ -222,7 +222,7 @@ class MyTestCase(unittest.TestCase):
                 h2.ConsIter(l1_dic[type_file2][old_val2:(j + int(type_file2))])
 
                 startC = time.time()
-                h1.Union(h2)
+                h1 = h1.Union(h2)
                 endC = time.time() - startC
 
                 h1.is_avltree()

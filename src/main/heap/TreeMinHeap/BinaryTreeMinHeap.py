@@ -1,10 +1,9 @@
 from math import *
 
+import numpy as np
+
 from src.main.FileReader import inf
 from src.main.heap.TreeMinHeap.BinaryTreeHeapNode import Node
-import graphviz as gv
-
-import numpy as np
 
 DEB = 2
 FIN = 10

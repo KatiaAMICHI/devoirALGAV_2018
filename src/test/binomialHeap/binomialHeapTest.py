@@ -150,19 +150,26 @@ class BinomialHeapTest(unittest.TestCase):
         a = {}
         for type_file in l1_dic.keys():
             old_val = 0
-            for i in range(0, 5 * int(type_file), int(type_file)):
-                h = binomialHeap.BinomialHeap()
-                startC = time.time()
-                h.ConsIter(l1_dic[type_file][old_val:(i + int(type_file))])
-                endC = time.time() - startC
-                h.is_binomialheap()
-                try:
-                    nb_foreach_file[type_file] += 1
-                    a[type_file] += endC
-                except:
-                    nb_foreach_file[type_file] = 1
-                    a[type_file] = endC
-                old_val = i + int(type_file)
+            if type_file == "10000":
+                for i in range(0, 1):
+                #for i in range(0, 5 * int(type_file), int(type_file)):
+                    h = binomialHeap.BinomialHeap()
+                    startC = time.time()
+                    h.ConsIter(l1_dic[type_file][old_val:(i + int(type_file))])
+                    c = h.head.next
+                    while c:
+                        print(" racine 1 : ", c.value)
+                        print(" racine 1 : ", c.rank)
+                        c = c.next
+                    endC = time.time() - startC
+                    h.is_binomialheap()
+                    try:
+                        nb_foreach_file[type_file] += 1
+                        a[type_file] += endC
+                    except:
+                        nb_foreach_file[type_file] = 1
+                        a[type_file] = endC
+                    old_val = i + int(type_file)
 
         for f in a.keys():
             a[f] /= nb_foreach_file[f]
@@ -174,7 +181,7 @@ class BinomialHeapTest(unittest.TestCase):
 
     def test_fichier_Merge(self):
         """
-        OK
+        OK ~ O(log(n))
         """
         l1_dic = FileReader()
 

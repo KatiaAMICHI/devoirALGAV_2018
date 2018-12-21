@@ -60,7 +60,7 @@ class BinomialHeap(object):
 
     def get_min_node(self):
         """
-        cherche la valeur minamal parmit tout les racine des sous arbre
+        cherche le noeud avec la valeur minimal parmit tout les racine des sous arbre
         :return: retourne la valeur minimal
         :rtype: BinomialHeap.Node
         """
@@ -79,9 +79,9 @@ class BinomialHeap(object):
 
     def delete_min(self):
         """
-        Delete the min value
+        Supp la valeur minimum
         :rtype: int | str
-        :return return the min value
+        :return return la valeur supprimer
         """
 
         if self.head.next is None:
@@ -107,13 +107,13 @@ class BinomialHeap(object):
 
     def insert(self, val):
         """
-        Insert value into self, using _merge between self and new BinomialHeap
+        Ajout de va a self, a partir de _merge entre self et new BinomialHeap
         """
         self._merge(BinomialHeap.Node(val))
 
     def _insert(self, list_val):
         """
-        Insert list of value into self, using _merge between self and new BinomialHeap foreach val
+        Ajout de list_val a self, en utilisant _merge entre self et new BinomialHeap pour chaque val de la liste
         :type list_val: list
         """
         for val in list_val:
@@ -121,7 +121,7 @@ class BinomialHeap(object):
 
     def merge(self, h):
         """
-        Merge between two BinomialHeap
+        Union entre deux BinomialHeap
         """
         if h is self:
             raise AssertionError("Error - it is the same tree")
@@ -134,7 +134,7 @@ class BinomialHeap(object):
 
     def _merge(self, other):
         """
-        Merge between self and other
+        Union entre deux BinomialHeap
         """
         assert self.head.rank == -1
         assert other is None or other.rank >= 0
@@ -161,8 +161,9 @@ class BinomialHeap(object):
                 node.next = tail
                 prevtail.next = node
                 prevtail = node
+            # si ils ont le même rang
             elif tail.rank == node.rank:
-                # Merge nodes
+                # Union nodes
                 if inf(tail.value, node.value, DEB, FIN) or tail.value == node.value:
                     node.next = tail.down
                     tail.down = node
@@ -179,8 +180,8 @@ class BinomialHeap(object):
 
     def ConsIter(self, item_list):
         """
-        :param item_list: list of element to insert
-        :type: list
+        :param item_list: l la liste d'elements a ajouter
+        :type: item_list: list
         """
 
         if len(item_list) == 0:
@@ -225,7 +226,7 @@ class BinomialHeap(object):
             assert self.next is None
             result = None
             down_node = self.down
-            while down_node is not None:  # Reverse the order of nodes from descending rank to ascending rank
+            while down_node is not None:
                 next_node = down_node.next
                 down_node.next = result
                 result = down_node

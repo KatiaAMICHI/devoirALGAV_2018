@@ -1,4 +1,5 @@
 from src.main.FileReader import inf, sup
+import graphviz as gv
 
 DEB = 2
 FIN = 10
@@ -277,6 +278,9 @@ class AVLTree(object):
 
         return result
 
+    def plot(self):
+        return self.node.plot()
+
     """
     Class Node AVL
     """
@@ -291,6 +295,31 @@ class AVLTree(object):
             self.left = None
             self.right = None
 
+        def is_full(self):
+            if self.left is not None and self.right is not None:
+                return True
+            return False
+
+        # Permet d'afficher l'arbre
+        def plot(self):
+            gtree = gv.Digraph(format='png')
+            return self.to_graph(gtree, str(self.key))
+
+        def to_graph(self, g, prefixe):
+            """ construit une représentation de l'arbre pour pouvoir
+                l'afficher
+            """
+            if not self.is_full():
+                g.node(prefixe, str(self.key), shape='ellipse')
+            else:
+                g.node(prefixe, str(self.key), shape='ellipse')
+                if not (self.left is None):
+                    self.left.to_graph(g, prefixe + "g")
+                    g.edge(prefixe, prefixe + "g")
+                if not (self.right is None):
+                    self.right.to_graph(g, prefixe + "d")
+                    g.edge(prefixe, prefixe + "d")
+            return g
 
 if __name__ == '__main__':
     tree = AVLTree()

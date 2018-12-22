@@ -7,11 +7,16 @@ import numpy as np
 
 DEB = 2
 FIN = 10
-SIZE = 5000
+SIZE = 5000  # la taille initiale de notre tableau
 
 
 class ArrayMinHeap:
     def __init__(self, heap_array=None, int_key=False):
+        """
+        Installation du tas, self.heap_array: représentat le tableau courant de notre class
+        :param heap_array: une liste d'element
+        :param int_key: si le tas est un tas de int
+        """
         if heap_array is not None:
             self.heap_array = np.array(heap_array)
             self.size = self.heap_array.__len__()
@@ -19,23 +24,44 @@ class ArrayMinHeap:
             self.heap_array = np.full((SIZE), np.int)
             self.size = 0
         else:
-            # initialisation d'un tableaux de str de taille 100
+            # initialisation d'un tableaux de str de taille SIZE
             self.heap_array = np.full((SIZE), np.str)
             self.size = 0
 
     def __len__(self):
+        """
+
+        :return: la taille du tas
+        """
         return len(self.heap_array)
 
     def clear_heap(self):
+        """
+        Cleaner le tableau
+        """
         self.heap_array.clear()
 
     def get_heap_array(self):
+        """
+
+        :return: le tableau avec nous vrai valeur
+        """
         return self.heap_array[0:self.size]
 
     def parent(self, i):
+        """
+
+        :param i: un index dans le tableau
+        :return: le pere de index i
+        """
         return (i - 1) / 2
 
     def percUp(self, i, key):
+        """
+        Permet de faire des swap en partant de i jusqu'a la racinec
+        :param i: index dans le tableau
+        :param key: la valeur ajouter
+        """
         while i > 0:
             pere = (i - 1) // 2
             e = self.heap_array[pere]
@@ -46,12 +72,22 @@ class ArrayMinHeap:
         self.heap_array[i] = key
 
     def swap(self, a, b):
+        """
+        Faire un swap entre deux valeur
+        :param a: valeur 1
+        :param b: valeur 1
+        :return: les deux valeur echanger
+        """
         tmp = a
         a = b
         b = tmp
         return a, b
 
     def percDown(self, i):
+        """
+        Permet de faire des swap en partant de i jusqu'a aarriver a la fin de notre tableau
+        :param i:
+        """
         while (i * 2 + 1) < self.size:
             mc = self.min_child(i)
             if not inf(self.heap_array[i], self.heap_array[mc], DEB, FIN):
@@ -65,7 +101,7 @@ class ArrayMinHeap:
     def min_child(self, i):
         """
         Renvoie le fils le plus petit de i
-        :type i :
+        :type i : une valeur dans le tableau
         :rtype: int | str
         """
         pere = i
@@ -81,17 +117,27 @@ class ArrayMinHeap:
                 return fils1 + 1
 
     def empty(self):
+        """
+
+        :return: renvoie true si le tableau est vide, false dans le cas contraire
+        """
         if self.size == 0:
             True
         return False
 
     def full(self):
+        """
+
+        :return: true si le tableau est plein
+        """
         return self.size == self.__len__()
 
-    def resize(self):
-        pass
-
     def insert(self, val, sort=True):
+        """
+        Ajouter une nouvelle valeur dans l'arbre
+        :param val: la valeur a ajouter
+        :param sort: si on trie ou pas
+        """
         if self.full():
             if isinstance(self.heap_array[0], np.int64) or isinstance(self.heap_array[0], np.int):
                 tmp = self.heap_array
@@ -108,11 +154,16 @@ class ArrayMinHeap:
                 self.percUp(self.size - 1, val)
 
     def get_min(self):
+        """
+
+        :return: Renvoie la valeur min du tableau
+        """
         return self.heap_array[0]
 
     def echange(self, pere, fils):
         """
-        Permet d echanger les valeurs de pere et fils
+        Permet d echanger les valeurs de pere et de fils
+        :return les valeur echanger
         """
         tmp = pere
         pere = fils
@@ -132,8 +183,9 @@ class ArrayMinHeap:
     def delete_min(self, sort=True):
         """
         Permet de supprrimer le min dans un Tas
-        @param T - Tas min
-        @return le Tas t sans l element min (la racine)
+
+        :param si on met a jour ou pas
+        :return la valeur suppr
         """
 
         val_min = self.heap_array[0]
@@ -148,42 +200,60 @@ class ArrayMinHeap:
         return val_min
 
     def ajout_simple(self, list_elem):
+        """
+        Permet de faire des ajout simple
+        :param list_elem:
+        """
         if list_elem is not None:
             for ele in list_elem:
                 self.insert(ele, False)
 
     def ConsIterTab(self, list_elem=None, ajout_simple=True):
+        """
+        Permet de contruire un tas
+
+        :param list_elem: liste d'element a ajouter, true par defaut
+        :param ajout_simple: si on effectue un ajout simple
+        """
         if ajout_simple:
             self.ajout_simple(list_elem)
 
         self.update_tree()
 
     def is_arrayMinHeap(self):
+        """
+        Permet de vérifier la structure du Tas
+
+        :return: True si ça respect la structure d'un tas, False dans le cas contraire
+        """
         index = self.size // 2 - 1
 
         for i in range(index, -1, -1):
             if (i * 2) < self.size:
                 mc = self.min_child(i)
-                # print(' je suis a l index : ', i, 'de valeur : ',  self.heap_array[i], ' je verifier avec mon fils min l index : ', mc, ' de valeur : ', self.heap_array[mc])
                 if not inf(self.heap_array[i], self.heap_array[mc], DEB, FIN):
                     if not (self.heap_array[i] == self.heap_array[mc]):
-                        print(self.heap_array[i], ' |||  ', self.heap_array[mc])
-                        # print(len(self.heap_array[i]), ' |||  ', len(self.heap_array[mc]))
                         return False
                 i = mc
         return True
 
     def Union(self, T_other):
+        """
+        Permet de faire l'union de deux Tas, on ajouter les element du tas avec le moins d'element dans l'autre
+
+        :param T_other: Tsa
+        :return: le tas résultat de la fusion de deux tas
+        """
 
         # Cas de base
         if not isinstance(T_other, ArrayMinHeap):
             raise AssertionError("Error - Tree_other most be instance of ArrayMinHeap")
-        elif not self.is_arrayMinHeap() or not T_other.is_arrayMinHeap():
-            raise AssertionError("Error - Invalid structure MinHeap for self.tree or tree_other")
+        # elif not self.is_arrayMinHeap() or not T_other.is_arrayMinHeap():
+        #   raise AssertionError("Error - Invalid structure MinHeap for self.tree or tree_other")
         elif T_other is self:
             raise AssertionError("Error - it the same tree")
         elif T_other.size == 0:
-            #raise AssertionError("Error - tree_other is empty")
+            # raise AssertionError("Error - tree_other is empty")
             return self
         elif self.size == 0:
             # on initialise notre arbre avec l'arbe passer en paramètre
@@ -195,72 +265,3 @@ class ArrayMinHeap:
         elif self.size < T_other.size:
             T_other.ConsIterTab(self.get_heap_array())
             return T_other
-
-
-if __name__ == "__main__":
-    """
-    heap0 = ArrayMinHeap(int_key=True)
-    heap4 = ArrayMinHeap(int_key=True)
-
-    print("################insert#########################")
-
-    heap0.insert(50)
-    heap0.insert(23)
-    heap0.insert(11)
-    heap0.insert(30)
-    heap0.insert(0)
-    print('heap0 : ', heap0.get_heap_array())
-    """
-    print("################ConsIter#########################")
-    heap1 = ArrayMinHeap()
-    heap2 = ArrayMinHeap(heap_array=[50, 23, 11, 30, 0])
-
-    # print("heap1 : ", heap1.size)
-    # print("heap2 : ", heap2.size)
-
-    heap1.ConsIterTab(list_elem=[50, 23, 11, 30, 0])
-    heap2.ConsIterTab(sort=False)
-
-    # print("heap1 : ", heap1.get_heap_array())
-    # print(heap1.is_arrayMinHeap())
-    # print(heap2.is_arrayMinHeap())
-
-    print("################Union#########################")
-    heap = ArrayMinHeap(heap_array=[5, 3, 1, 39, 6])
-
-    heap.ConsIterTab()
-    print('heap : ', heap.get_heap_array())
-    print('heap1 : ', heap1.get_heap_array())
-    heap = heap.Union(heap1)
-    print('new heap : ', heap.get_heap_array())
-    #
-    """
-    print("################Delete#########################")
-    heap4.ConsIterTab([50, 23, 11, 30, 0])
-    print('heap_array : ', heap4.get_heap_array())
-    print('min : ', heap4.get_min())
-    print('delete : ', heap4.delete_min())
-    print('après le delete du min : ', heap4.get_heap_array())
-    heap4.insert(1)
-    print('après ajout : ', heap4.get_heap_array())
-    heap4.insert(12)
-    print('après ajout : ', heap4.get_heap_array())
-
-    print()
-    """
-    print("################bbbbbbbbbbbb#########################")
-    # print()
-    # hh = ArrayMinHeap()
-    # hh2 = ArrayMinHeap()
-    # s = 10000
-    # li = np.full(s, np.int)
-    # for i in range(0, s, 1):
-    #     li[i] = random.randint(0, 101, 2)
-    #
-    # print(' avant : ', li)
-    # for i in li:
-    #     hh.insert(i)
-    #
-    # print('h1 : ', hh.is_arrayMinHeap())
-    # print()
-

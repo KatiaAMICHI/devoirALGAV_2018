@@ -1,7 +1,5 @@
-# TODO changer la méthode retation; utilisant celle vu en td
-# TODO changer < et > to inf
-
 from src.main.FileReader import inf, sup
+import graphviz as gv
 
 DEB = 2
 FIN = 10
@@ -17,35 +15,49 @@ class AVLTree(object):
         self.height = -1
         self.balance = 0  # height(LeftSubTree) - height(RightSubTree)
 
-    def getheight(self):
+    def get_height(self):
+        """
+
+        :return: renvoi la hauteur de l'arbre
+        """
         return self.height
 
-    def getbalance(self):
-        return self.balance
+    def set_heights(self, recursive=True):
+        """
+        Peremet de mettre a jour la hautre de l'arbre
 
-    def edit_heights(self, recursive=True):
+        :param recursive: si on le fait de façon résurcive, pout tous les sous-fils
+        """
         if self.node:
             if recursive:
                 if self.node.left:
-                    self.node.left.edit_heights()
+                    self.node.left.set_heights()
                 if self.node.right:
-                    self.node.right.edit_heights()
+                    self.node.right.set_heights()
 
             self.height = 1 + max(self.node.left.height, self.node.right.height)
         else:
             self.height = -1
 
-    def edit_balances(self, recursive=True):
+    def get_balance(self):
+        """
+
+        :return: renvoie balance
+        """
+        return self.balance
+
+    def set_balances(self, recursive=True):
         """
         Différence de hauteur entre les deux fils d'un noeud
-        :param recursive: de calculer la différence de hauteur de façon recursive; pour chaque sous fils
+
+        :param recursive: de calculer la différence de hauteur de façon recursive; pour chaque sous-fils
         """
         if self.node:
             if recursive:
                 if self.node.left:
-                    self.node.left.edit_balances()
+                    self.node.left.set_balances()
                 if self.node.right:
-                    self.node.right.edit_balances()
+                    self.node.right.set_balances()
 
             self.balance = self.node.left.height - self.node.right.height
         else:
@@ -53,13 +65,13 @@ class AVLTree(object):
 
     def requilibrage(self):
         """
-        Requilibrage de notre arbre dans dans cas où on a une différence d'hautre de plus de 1 entre nos sous-arbres
+        Requilibrage de notre arbre dans le cas où on a une différence d'hautre de plus de 1 entre nos sous-arbres
         """
 
         # mise a jour de heights et de balance
         # augmenter de 1
-        self.edit_heights(recursive=False)
-        self.edit_balances(recursive=False)
+        self.set_heights(recursive=False)
+        self.set_balances(recursive=False)
 
         # tant qu'on a une différence d'équilibraque qui est supérieur à 1 et inférieur a -1 on continue
         while self.balance < -1 or self.balance > 1:
@@ -67,25 +79,25 @@ class AVLTree(object):
                 # alors le sous-arbre doit a une hauteur plus grande que celle du sous-arbre gauche
                 if self.node.left.balance < 0:
                     self.node.left.rotate_left()
-                    self.edit_heights()
-                    self.edit_balances()
+                    self.set_heights()
+                    self.set_balances()
 
                 self.rotate_right()
-                self.edit_heights()
-                self.edit_balances()
+                self.set_heights()
+                self.set_balances()
             if self.balance < -1:
                 if self.node.right.balance > 0:
                     self.node.right.rotate_right()
-                    self.edit_heights()
-                    self.edit_balances()
+                    self.set_heights()
+                    self.set_balances()
 
                 self.rotate_left()
-                self.edit_heights()
-                self.edit_balances()
+                self.set_heights()
+                self.set_balances()
 
     def delete_value(self, key):
         """
-        Supprition d'une key dans l'arbre
+        Supprisson d'une key dans l'arbre
         :type key : int | str
         :param key: la cle a supprimer dans notre arbre
         """
@@ -137,7 +149,7 @@ class AVLTree(object):
         # creation d'un node avec comme valeur key
         n = self.NodeAVL(key)
 
-        # inisialisation de l'arbre
+        # initialisation de l'arbre
         if not self.node:
             self.node = n
             self.node.left = AVLTree()
@@ -155,7 +167,7 @@ class AVLTree(object):
 
     def rotate_right(self):
         """
-        Right rotation
+        Rotation droit
         """
         new_root = self.node.left.node
         new_left_sub = new_root.right.node
@@ -167,7 +179,7 @@ class AVLTree(object):
 
     def rotate_left(self):
         """
-        Left rotation
+        Rotation gauche
         """
         new_root = self.node.right.node
         new_left_sub = new_root.left.node
@@ -179,8 +191,12 @@ class AVLTree(object):
 
     def search(self, key):
         """
+        Chercher une valeur dans l'arbre
+
         :type key : int | str
         :rtype: bool
+        :return true si la clé a été trouver, false dans le cas contraire
+        :rtype bool
         """
         current = self.node
         while current is not None:
@@ -192,16 +208,13 @@ class AVLTree(object):
                 current = current.right.node
         return False
 
-    def search2(self, root, key):
-
-        if root is None or root.val == key:
-            return root
-        if root.val < key:
-            return self.search(root.right, key)
-
-        return self.search(root.left, key)
-
     def is_avltree(self):
+        """
+        Vérifier si l'arbre obtenu est respect bien la structure AVL
+
+        :return: true si la tructure AVL est bien respecter, génére une erreur dans le cas contraire
+        :rtype bool
+        """
         if self.balance not in [-1, 0, 1]:
             print('balance : ', self.balance)
             raise AssertionError("Error - Balance")
@@ -217,20 +230,33 @@ class AVLTree(object):
         return True
 
     def ConsIter(self, list_value):
+        """
+        Construction d'un avl avec une liste d'élément, en utilisant insert pour chaque element
+
+        :param list_value:
+        :type list_value: list
+        """
+
+        # faire appel a la méthode insert pour chaque element de la liste passer en paramètre
         for val in list_value:
             self.insert(val, sort=True)
 
     def Union(self, avl_tree):
         """
-        Union de deux arbre de recherche
-        :param avl_tree:
+        Union de deux arbre de recherche;
+        consiste à ajout les elements de l'arbre qui continent le moins d'élements dans l'autre
+
+        :param avl_tree: arbre a fusion
         :type avl_tree: AVLTree
-        :return:
+        :return: l'avl résultat de l'union de deux avl
+        :rtype AVLTree
         """
 
+        # vérifier si avl_tree est bien une instance de avl
         if not isinstance(avl_tree, AVLTree):
-                raise AssertionError("Error - avl_tree is not instance of AVL")
+            raise AssertionError("Error - avl_tree is not instance of AVL")
 
+        # ajouter la liste d'élément de l'arbre avec le moins d'élément dans celui avec le plus d'élément
         if len(self.print_pre_tree()) < len(avl_tree.print_pre_tree()):
             for ele in self.print_pre_tree():
                 avl_tree.insert(ele, sort=True)
@@ -241,6 +267,9 @@ class AVLTree(object):
             return self
 
     def print_pre_tree(self):
+        """
+        Affichage préfixe
+        """
         result = []
         if not self.node:
             return result
@@ -251,6 +280,9 @@ class AVLTree(object):
         return result
 
     def print_inf_tree(self):
+        """
+        Affichage infixe
+        """
         result = []
         if not self.node:
             return result
@@ -261,6 +293,9 @@ class AVLTree(object):
         return result
 
     def print_post_tree(self):
+        """
+            Affichage infixe
+        """
         result = []
         if not self.node:
             return result
@@ -271,6 +306,9 @@ class AVLTree(object):
         return result
 
     def print_tree(self):
+        """
+        Affichage de l'arbre sous forme de liste
+        """
         result = []
         if not self.node:
             return result
@@ -280,45 +318,59 @@ class AVLTree(object):
 
         return result
 
+    def plot(self):
+        """
+        Représentation graphique de l'arbre
+        """
+        return self.node.plot()
+
     """
-    Class Node AVL
+    Class Noeud AVL
     """
 
     class NodeAVL(object):
-        """
-        A node in an avl tree.
-        """
 
         def __init__(self, key):
+            """
+            Inisialisation du noeud avec une valeur key
+            :param key: la valeur du noeud a créeer
+            :type key : int | str
+            """
             self.key = key
             self.left = None
             self.right = None
 
+        def is_full(self):
+            """
+            Permet d'indiquer si un noeud est une feuille
+            :return: true dans le cas où notre noeud est une feuille,
+                        false dans le cas contraire
+            :rtype : bool
+            """
+            if self.left is not None and self.right is not None:
+                return True
+            return False
 
-if __name__ == '__main__':
-    tree = AVLTree()
-    tree2 = AVLTree()
-    liste_elem3 = [34, 67, 21]
-    liste_elem4 = [2, 2, 4, 5, 6]
+        # Permet d'afficher l'arbre
+        def plot(self):
+            """
+            Représentation graphique de l'arbre
+            """
+            gtree = gv.Digraph(format='png')
+            return self.to_graph(gtree, str(self.key))
 
-    for ele in liste_elem3:
-        tree.insert(ele, sort=True)
-
-    for ele in liste_elem4:
-        tree2.insert(ele, sort=True)
-
-    print('height : ', tree.getheight())
-    print('balance : ', tree.getbalance())
-    print('tree :', tree.print_tree())
-    print('node : ', tree.node.key)
-    print('fils left : ', tree.node.left.node.key)
-
-    tree = tree.Union(tree2)
-    print()
-    print(".............................................;")
-    print()
-    print('height : ', tree.getheight())
-    print('balance : ', tree.getbalance())
-    print('tree :', tree.print_tree())
-    print('node : ', tree.node.key)
-    print('fils left : ', tree.node.left.node.key)
+        def to_graph(self, g, prefixe):
+            """
+            Construit une représentation de l'arbre pour pouvoir l'afficher
+            """
+            if not self.is_full():
+                g.node(prefixe, str(self.key), shape='ellipse')
+            else:
+                g.node(prefixe, str(self.key), shape='ellipse')
+                if not (self.left is None):
+                    self.left.to_graph(g, prefixe + "g")
+                    g.edge(prefixe, prefixe + "g")
+                if not (self.right is None):
+                    self.right.to_graph(g, prefixe + "d")
+                    g.edge(prefixe, prefixe + "d")
+            return g

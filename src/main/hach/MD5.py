@@ -12,51 +12,66 @@ class MD5(object):
     # Utilisation de 758 constant
     constants = [int(abs(math.sin(i + 1)) * 2 ** 32) & 0xFFFFFFFF for i in range(64)]
 
-    # Préparation des variables :
+    # Préparation de la listes variables :
     init_values = [0x67452301, 0xefcdab89, 0x98badcfe, 0x10325476]
 
-    # (b and c) ou (not b and d) + (d and b) ou (not d and c) + b xor c xor d + c xor (b ou not d)
-    functions = 16 * [lambda b, c, d: (b & c) | (~b & d)] + \
+    # Definition des lambda pour
+    #           (b and c) ou (not b and d) + (d and b) ou (not d and c) + b xor c xor d + c xor (b ou not d)
+    operation = 16 * [lambda b, c, d: (b & c) | (~b & d)] + \
                 16 * [lambda b, c, d: (d & b) | (~d & c)] + \
                 16 * [lambda b, c, d: b ^ c ^ d] + \
                 16 * [lambda b, c, d: c ^ (b | ~d)]
 
-    index_functions = 16 * [lambda i: i] + \
+    index_operation = 16 * [lambda i: i] + \
                       16 * [lambda i: (5 * i + 1) % 16] + \
                       16 * [lambda i: (3 * i + 5) % 16] + \
                       16 * [lambda i: (7 * i) % 16]
 
+    # définition de la fonction rotation
     @staticmethod
-    def left_rotate(x, amount):
+    def left_rotate(x, c):
+        """
+        Fonction rotation
+        :param x:
+        :param c:
+        :return:
+        """
         x &= 0xFFFFFFFF
-        return ((x << amount) | (x >> (32 - amount))) & 0xFFFFFFFF
+        return ((x << c) | (x >> (32 - c))) & 0xFFFFFFFF
 
-    def md5(self, message):
+    def word_md5(self, message):
+        """
+        Permet de hacher le mot message
+        :param message: mot a hacher
+        :return: message hacher
+        """
         message = bytearray(message)  # copy our input into a mutable buffer
-        orig_len_in_bits = (8 * len(message)) & 0xffffffffffffffff
+        len_msg_bits = (8 * len(message)) & 0xffffffffffffffff
         message.append(0x80)
+
+        # remplissage avec des zéros
         while len(message) % 64 != 56:
             message.append(0)
-        message += orig_len_in_bits.to_bytes(8, byteorder='little')
 
-        hash_pieces = self.init_values[:]
+        message += len_msg_bits.to_bytes(8, byteorder='little')
 
-        for chunk_ofst in range(0, len(message), 64):
-            a, b, c, d = hash_pieces
-            chunk = message[chunk_ofst:chunk_ofst + 64]
-            for i in range(64):
-                f = self.functions[i](b, c, d)
-                g = self.index_functions[i](i)
-                to_rotate = a + f + self.constants[i] + int.from_bytes(chunk[4 * g:4 * g + 4], byteorder='little')
-                new_b = (b + self.left_rotate(to_rotate, self.rotate_amounts[i])) & 0xFFFFFFFF
+        hash_result = self.init_values[:]
+
+        for i in range(0, len(message), 64):
+            a, b, c, d = hash_result
+            chunk = message[i:i + 64]
+            for j in range(64):
+                f = self.operation[j](b, c, d)
+                g = self.index_operation[j](j)
+                to_rotate = a + f + self.constants[j] + int.from_bytes(chunk[4 * g:4 * g + 4], byteorder='little')
+                new_b = (b + self.left_rotate(to_rotate, self.rotate_amounts[j])) & 0xFFFFFFFF
                 a, b, c, d = d, new_b, b, c
-            for i, val in enumerate([a, b, c, d]):
-                hash_pieces[i] += val
-                hash_pieces[i] &= 0xFFFFFFFF
+            # ajout des résultat obtenue
+            for j, val in enumerate([a, b, c, d]):
+                hash_result[j] += val
+                hash_result[j] &= 0xFFFFFFFF
 
-        return sum(x << (32 * i) for i, x in enumerate(hash_pieces))
+        digest = sum(x << (32 * i) for i, x in enumerate(hash_result))
 
-    @staticmethod
-    def md5_to_hex(digest):
         raw = digest.to_bytes(16, byteorder='little')
         return '{:032x}'.format(int.from_bytes(raw, byteorder='big'))

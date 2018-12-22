@@ -39,7 +39,9 @@ class MyTestCase(unittest.TestCase):
         liste_elem1 = [50, 30, 70, 20, 40, 60, 80]
 
         for ele in liste_elem1:
-            tree.insert(ele)
+            tree.insert(ele, sort=True)
+        print(tree.print_pre_tree())
+        print('hethright : ', tree.getheight())
         self.assertEqual(tree.getheight(), 2)
         self.assertEqual(tree.getbalance(), 0)
         self.assertEqual(tree.search(60), True)
@@ -49,11 +51,13 @@ class MyTestCase(unittest.TestCase):
 
     def test_fichier_Search(self):
         """
-        KO a reftester
+        OK ~ log(n)
         """
         l1_dic = FileReader()
 
         a = {}
+        nb_foreach_file = {}
+
         for type_file in l1_dic.keys():
             old_val = 0
             for i in range(0, 5 * int(type_file), int(type_file)):
@@ -61,7 +65,7 @@ class MyTestCase(unittest.TestCase):
 
                 h.ConsIter(l1_dic[type_file][old_val:(i + int(type_file))])
 
-                delete_index_rand = random.randint(0, len(l1_dic[type_file][old_val:(i + int(type_file))])-1)
+                delete_index_rand = random.randint(0, len(l1_dic[type_file][old_val:(i + int(type_file))]) - 1)
                 value_to_delete = l1_dic[type_file][old_val:(i + int(type_file))][delete_index_rand]
 
                 startC = time.time()
@@ -74,33 +78,36 @@ class MyTestCase(unittest.TestCase):
 
                 h.is_avltree()
                 try:
+                    nb_foreach_file[type_file] += 1
                     a[type_file] += endC
                 except:
+                    nb_foreach_file[type_file] = 1
                     a[type_file] = endC
                 old_val = i + int(type_file)
 
         for ele in a.keys():
-            a[ele] /= 5
+            a[ele] /= nb_foreach_file[ele]
 
-        sortDic = OrderedDict(a.items())
+        sortDic = OrderedDict(sorted(a.items(), key=lambda x: int(x[0])))
         pprint.pprint(sortDic)
-        plot(sortDic)
+        plot(sortDic, name="AVLTree_Recheche")
 
     def test_fichier_Search_Delete(self):
         """
-        OK
+        OK O(log(n)) | O(1)
         """
         l1_dic = FileReader()
 
         a = {}
+        nb_foreach_file = {}
+
         for type_file in l1_dic.keys():
             old_val = 0
             for i in range(0, 5 * int(type_file), int(type_file)):
                 h = AVLTree()
-                for ele in l1_dic[type_file][old_val:(i + int(type_file))]:
-                    h.insert(ele)
+                h.ConsIter(l1_dic[type_file][old_val:(i + int(type_file))])
 
-                delete_index_rand = random.randint(0, len(l1_dic[type_file][old_val:(i + int(type_file))])-1)
+                delete_index_rand = random.randint(0, len(l1_dic[type_file][old_val:(i + int(type_file))]) - 1)
                 value_to_delete = l1_dic[type_file][old_val:(i + int(type_file))][delete_index_rand]
 
                 self.assertEqual(h.search(value_to_delete), True)
@@ -113,25 +120,28 @@ class MyTestCase(unittest.TestCase):
                 self.assertEqual(h.search(value_to_delete), False)
 
                 try:
+                    nb_foreach_file[type_file] += 1
                     a[type_file] += endC
                 except:
+                    nb_foreach_file[type_file] = 1
                     a[type_file] = endC
                 old_val = i + int(type_file)
 
         for ele in a.keys():
-            a[ele] /= 5
+            a[ele] /= nb_foreach_file[ele]
 
-        sortDic = OrderedDict(a.items())
+        sortDic = OrderedDict(sorted(a.items(), key=lambda x: int(x[0])))
         pprint.pprint(sortDic)
-        plot(sortDic)
+        plot(sortDic, name="AVL_tree_SuppElement")
 
     def test_fichier_Insert(self):
         """
-        OK
+        OK ~ O(log(n)
         """
         l1_dic = FileReader()
 
         a = {}
+        nb_foreach_file = {}
         for type_file in l1_dic.keys():
             old_val = 0
             for i in range(0, 5 * int(type_file), int(type_file)):
@@ -140,27 +150,31 @@ class MyTestCase(unittest.TestCase):
                 for ele in l1_dic[type_file][old_val:(i + int(type_file))]:
                     h.insert(ele, sort=True)
                 endC = time.time() - startC
+                endC /= len(l1_dic[type_file][old_val:(i + int(type_file))])
                 h.is_avltree()
                 try:
+                    nb_foreach_file[type_file] += 1
                     a[type_file] += endC
                 except:
+                    nb_foreach_file[type_file] = 1
                     a[type_file] = endC
                 old_val = i + int(type_file)
 
         for ele in a.keys():
-            a[ele] /= 5
+            a[ele] /= nb_foreach_file[ele]
 
-        sortDic = OrderedDict(a.items())
+        sortDic = OrderedDict(sorted(a.items(), key=lambda x: int(x[0])))
         pprint.pprint(sortDic)
-        plot(sortDic)
+        plot(sortDic, name="AVLTree_Ajout")
 
     def test_fichier_ConstIter(self):
         """
-        OK
+        OK ~ n*log(n)
         """
         l1_dic = FileReader()
 
         a = {}
+        nb_foreach_file = {}
         for type_file in l1_dic.keys():
             old_val = 0
             for i in range(0, 5 * int(type_file), int(type_file)):
@@ -170,27 +184,20 @@ class MyTestCase(unittest.TestCase):
                 endC = time.time() - startC
                 h.is_avltree()
                 try:
+                    nb_foreach_file[type_file] += 1
                     a[type_file] += endC
                 except:
+                    nb_foreach_file[type_file] = 1
                     a[type_file] = endC
                 old_val = i + int(type_file)
 
         for ele in a.keys():
-            a[ele] /= 5
-        pprint.pprint(a)
+            a[ele] /= nb_foreach_file[ele]
 
-        sortDic = OrderedDict(a.items())
+        sortDic = OrderedDict(sorted(a.items(), key=lambda x: int(x[0])))
+        pprint.pprint(sortDic)
 
-        p = figure(title="BinaryTreeMinHeap_consIter", y_axis_type="log",
-                   x_range=(0, 50000), y_range=(list(sortDic.values())[0], 2),
-                   background_fill_color="#fafafa")
-
-        p.line(list(sortDic.keys()), list(sortDic.values()), legend="y=sqrt(x)",
-               line_color="tomato", line_dash="dashed")
-
-        p.legend.location = "top_left"
-
-        show(p)
+        plot(sortDic, name="AVLTree")
 
     def test_fichier_Merge(self):
         """
@@ -202,6 +209,8 @@ class MyTestCase(unittest.TestCase):
         l2_dic = list(l1_dic.keys())
 
         l2_dic.reverse()
+        nb_foreach_file = {}
+
         for type_file1, type_file2 in zip(l1_dic.keys(), l2_dic):
             old_val1 = 0
             old_val2 = 0
@@ -213,30 +222,22 @@ class MyTestCase(unittest.TestCase):
                 h2.ConsIter(l1_dic[type_file2][old_val2:(j + int(type_file2))])
 
                 startC = time.time()
-                h1.Union(h2)
+                h1 = h1.Union(h2)
                 endC = time.time() - startC
 
                 h1.is_avltree()
                 try:
+                    nb_foreach_file[str(int(type_file1) + int(type_file2))] += 1
                     a[str(int(type_file1) + int(type_file2))] += endC
                 except:
+                    nb_foreach_file[str(int(type_file1) + int(type_file2))] = 1
                     a[str(int(type_file1) + int(type_file2))] = endC
                 old_val1 = i + int(type_file1)
                 old_val2 = i + int(type_file2)
 
         for ele in a.keys():
-            a[ele] /= 5
+            a[ele] /= nb_foreach_file[ele]
         pprint.pprint(a)
 
-        sortDic = OrderedDict(a.items())
-
-        p = figure(title="BinaryTreeMinHeap_insert", y_axis_type="log",
-                   x_range=(0, 50000), y_range=(list(sortDic.values())[0], 2),
-                   background_fill_color="#fafafa")
-
-        p.line(list(sortDic.keys()), list(sortDic.values()), legend="y=sqrt(x)",
-               line_color="tomato", line_dash="dashed")
-
-        p.legend.location = "top_left"
-
-        show(p)
+        sortDic = OrderedDict(sorted(a.items(), key=lambda x: int(x[0])))
+        plot(sortDic, name="AVLTree_Union")
